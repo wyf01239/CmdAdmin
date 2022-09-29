@@ -27,7 +27,6 @@ echo Copyright wyf9. All Rights Reserved.
 echo Project Home: https://github.com/wyf01239/wyfadmin
 echo Contact:
 echo email: wyf01299@163.com
-echo website: wyf9.bj.bcebos.com
 echo [%date% %time%]Show version info>>running.log
 goto back
 :systemver
