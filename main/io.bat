@@ -10,9 +10,7 @@ if %1==whelp goto wyfhelp
 echo [%date% %time%]Input other command>>running.log
 %1 %2 %3 %4 %5 %6 %7 %8 %9
 :back
-if NOT %errorlevel%==0 goto err
-:backto
-echo [%date% %time%]No error>>running.log
+echo [%date% %time%]Back>>running.log
 admin back
 :dlog
 del running.log
@@ -40,20 +38,3 @@ goto back
 echo None
 echo [%date% %time%]Show helps>>running.log
 goto back
-:err
-if %errorlevel%==1 goto backto
-if %errorlevel%==9009 goto backto
-if %errorlevel%==9059 goto backto
-if %errorlevel%==4 goto backto
-echo [%date% %time%]---------->>running.log
-echo [%date% %time%]Error code:%errorlevel%>>running.log
-echo.
-echo Your program is experiencing a problem and needs to exit.
-echo Press any key to exit the program.
-echo If you need help, provide the developer with a running.log
-echo error code: %errorlevel%
-echo *** This feature is in beta
-echo *** If you find that an error occurred while performing a system operation that caused the program to display this content, please submit the running.log to Issues
-pause
-echo [%date% %time%]Exit.>>running.log
-exit
