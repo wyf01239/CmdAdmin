@@ -1,9 +1,9 @@
 set wver=Beta 2.1.0
 set wvdate=2022.8.11
 :go
+if %1==wback goto back
 if %1==exit goto exit
 if %1==dellog goto dlog
-if %1==error goto error
 if %1==cls goto cls
 if %1==wver goto wyfver
 if %1==sysver goto systemver
