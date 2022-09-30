@@ -1,6 +1,7 @@
-rem
-title Wyfadin - Plugin "%0"
+set pluginname=%0
+title Wyfadin - Plugin "%pluginname:plugins\=%"
+rem ----------
 set /a jg=%1
 echo %jg%
-pause
+rem ----------
 io wback
