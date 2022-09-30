@@ -4,4 +4,4 @@ rem ----------
 set /a jg=%1
 echo %jg%
 rem ----------
-io wback
+admin back
