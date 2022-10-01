@@ -10,12 +10,11 @@ if exist plugins\%1 goto wopenplugin
 if exist plugins\%1.bat goto wopenplugin
 %1 %2 %3 %4 %5 %6 %7 %8 %9
 :wback
-echo [%date% %time%]正常返回>>running.log
+echo [%date% %time%]返回>>running.log
 admin back
 :wopenplugin
 plugins\%1 %2 %3 %4 %5 %6 %7 %8 %9
-echo test...
-pause
+goto wback
 :dlog
 del running.log
 exit
@@ -37,7 +36,7 @@ echo 内部命令:
 echo exit   退出程序
 echo dellog 删除日志文件(running.log)并退出
 echo wver   显示版本信息
-echo whelp  显示此文字
+echo whelp  显示此提示
 echo.
 echo [%date% %time%]显示内置帮助>>running.log
 goto wback
