@@ -11,6 +11,6 @@ echo [%date% %time%]Õý³£Æô¶¯>>running.log
 :goto
 echo [%date% %time%]µÈ´ýÃüÁî>>running.log
 set /p com=^>^>
-echo [%date% %time%]Ö´ÐÐÃüÁî:"%com%">>running.log
+echo [%date% %time%]Ö´ÐÐÃüÁî: "%com%">>running.log
 io %com%
 exit

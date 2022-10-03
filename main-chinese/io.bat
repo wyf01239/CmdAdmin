@@ -13,6 +13,7 @@ if exist plugins\%1.bat goto wopenplugin
 echo [%date% %time%]返回>>running.log
 admin back
 :wopenplugin
+echo [%date% %time%]运行插件: "%1">>running.log
 plugins\%1 %2 %3 %4 %5 %6 %7 %8 %9
 goto wback
 :dlog

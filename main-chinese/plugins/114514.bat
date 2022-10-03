@@ -1,6 +1,4 @@
-rem 该插件可独立运行
 rem 作者:wyf9 2022.10.3
-@echo off
 set pluginname=%0
 title Wyfadin - Plugin "%pluginname:plugins\=%"
 rem ----------
