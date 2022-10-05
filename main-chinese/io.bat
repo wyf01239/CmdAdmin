@@ -5,7 +5,7 @@ if %1==exit goto exit
 if %1==dellog goto dlog
 if %1==wver goto wver
 if %1==whelp goto whelp
-if %1==wplugins goto wshowplugin
+if %1==wplugins goto wsplugin
 echo [%date% %time%]输入非预设命令>>running.log
 if exist plugins\%1 goto wopenplugin
 if exist plugins\%1.bat goto wopenplugin
@@ -35,15 +35,15 @@ echo [%date% %time%]显示版本信息>>running.log
 goto wback
 :whelp
 echo 内部命令:
-echo exit       退出程序
-echo dellog     删除日志文件(running.log)并退出
-echo wver       显示版本信息
-echo whelp      显示此提示
-echo wplugins   显示插件列表
+echo exit          退出程序
+echo dellog        删除日志文件(running.log)并退出
+echo wver          显示版本信息
+echo whelp         显示此提示
+echo wplugins      显示插件列表
 echo.
 echo [%date% %time%]显示内置帮助>>running.log
 goto wback
-:wshowplugin
+:wsplugin
 echo.
 echo 插件列表:
 dir /a:-d-h-s /b plugins\
