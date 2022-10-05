@@ -1,4 +1,5 @@
 rem 作者:wyf9 2022.10.3
+@echo off
 set pluginname=%0
 title Wyfadin - Plugin "%pluginname:plugins\=%"
 rem ----------
@@ -23,12 +24,10 @@ goto end
 echo.
 :new
 echo %3>plugins\notes\note_%2.txt
-echo.
 echo 已创建一条提示: "%2" ,内容: "%3" ,位于 "%cd%\plugins\notes\note_%2.txt".
 echo.
 goto end
 :delnote
-echo.
 echo 内容:
 type plugins\notes\note_%2.txt
 echo.
@@ -37,13 +36,14 @@ echo 已删除提示 "%2".
 echo.
 goto end
 :read
-echo.
 echo "%2" 的内容:
 type plugins\notes\note_%2.txt
 echo.
 goto end
 :all
-dir plugins\notes\
+echo 提示列表:
+dir /a:-d-h-s /b plugins\notes
+echo.
 goto end
 :end
 rem ----------
