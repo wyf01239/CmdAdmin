@@ -46,6 +46,6 @@ goto wback
 :wsplugin
 echo.
 echo ²å¼þÁÐ±í:
-dir /a:-d-h-s /b plugins\
+dir /a:-d-h-s-a-i-o-l /b plugins\
 echo.
 goto wback
