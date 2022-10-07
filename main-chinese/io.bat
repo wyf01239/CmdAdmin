@@ -1,5 +1,5 @@
-set wver=Beta 2.1.0
-set wvdate=2022.8.11
+set wver=Beta 0.3.0
+set wvdate=2022.10.7
 :go
 if %1==exit goto exit
 if %1==dellog goto dlog
@@ -46,6 +46,6 @@ goto wback
 :wsplugin
 echo.
 echo ²å¼þÁÐ±í:
-dir /a:-d-h-s-a-i-o-l /b plugins\
+dir /a:-d-h-s /b plugins\
 echo.
 goto wback
