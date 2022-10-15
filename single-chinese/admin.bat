@@ -10,31 +10,31 @@ if %1==cls goto cls
 if %1==wver goto wyfver
 if %1==sysver goto systemver
 if %1==whelp goto wyfhelp
-echo [%date% %time%]è¾“å…¥éžé¢„è®¾å‘½ä»¤>>running.log
+echo [%date% %time%]ÊäÈë·ÇÔ¤ÉèÃüÁî>>running.log
 %1 %2 %3 %4 %5 %6 %7 %8 %9
 goto back
 :go
 echo ==========>>running.log
-echo [%date% %time%]ç¨‹åºå¯åŠ¨>>running.log
-echo [%date% %time%]è¯­è¨€:Chinese(ä¸­æ–‡)>>running.log
-echo [%date% %time%]ç‰ˆæœ¬å·:%wver%>>running.log
-echo Wyfadmin ç‰ˆæœ¬ï¼š%wver%.
-echo ç‰ˆæƒæ‰€æœ‰ wyf9. ä¿ç•™æ‰€æœ‰æƒ.
-echo ç³»ç»Ÿæ—¶é—´ï¼›%date% %time%
-echo [%date% %time%]æ­£å¸¸å¯åŠ¨>>running.log
+echo [%date% %time%]³ÌÐòÆô¶¯>>running.log
+echo [%date% %time%]ÓïÑÔ:Chinese(ÖÐÎÄ)>>running.log
+echo [%date% %time%]°æ±¾ºÅ:%wver%>>running.log
+echo Wyfadmin °æ±¾£º%wver%.
+echo °æÈ¨ËùÓÐ wyf9. ±£ÁôËùÓÐÈ¨.
+echo ÏµÍ³Ê±¼ä£»%date% %time%
+echo [%date% %time%]Õý³£Æô¶¯>>running.log
 :goto
-echo [%date% %time%]ç­‰å¾…å‘½ä»¤>>running.log
+echo [%date% %time%]µÈ´ýÃüÁî>>running.log
 set /p com=^>^>
-echo [%date% %time%]æ‰§è¡Œå‘½ä»¤:"%com%">>running.log
+echo [%date% %time%]Ö´ÐÐÃüÁî:"%com%">>running.log
 %0 %com%
 exit
 :back
 if NOT %errorlevel%==0 goto err
 :backto
-echo [%date% %time%]æ— é”™è¯¯è¿”å›ž>>running.log
+echo [%date% %time%]ÎÞ´íÎó·µ»Ø>>running.log
 %0 back
 :exit
-echo [%date% %time%]ç¨‹åºé€€å‡º>>running.log
+echo [%date% %time%]³ÌÐòÍË³ö>>running.log
 exit
 :dlog
 del running.log
@@ -43,13 +43,13 @@ exit
 cls
 goto back
 :wyfver
-echo wyfadmin ç‰ˆæœ¬ï¼š%wver%
-echo æ‰“åŒ…æ—¥æœŸï¼š%wvdate%
-echo ç‰ˆæƒæ‰€æœ‰ wyf9. ä¿ç•™æ‰€æœ‰æƒ.
-echo è”ç³»æ–¹å¼ï¼š
-echo é‚®ç®±ï¼šwyf01299@163.com
-echo ç½‘ç«™ï¼šwyf9.bj.bcebos.com
-echo [%date% %time%]æ˜¾ç¤ºç‰ˆæœ¬ä¿¡æ¯>>running.log
+echo wyfadmin °æ±¾£º%wver%
+echo ´ò°üÈÕÆÚ£º%wvdate%
+echo °æÈ¨ËùÓÐ wyf9. ±£ÁôËùÓÐÈ¨.
+echo ÁªÏµ·½Ê½£º
+echo ÓÊÏä£ºwyf01299@163.com
+echo ÍøÕ¾£ºwyf9.bj.bcebos.com
+echo [%date% %time%]ÏÔÊ¾°æ±¾ÐÅÏ¢>>running.log
 goto back
 :systemver
 ver
@@ -57,7 +57,7 @@ start %windir%\system32\winver.exe
 goto back
 :wyfhelp
 echo None
-echo [%date% %time%]æ˜¾ç¤ºå†…ç½®å¸®åŠ©>>running.log
+echo [%date% %time%]ÏÔÊ¾ÄÚÖÃ°ïÖú>>running.log
 goto back
 :err
 if %errorlevel%==1 goto backto
@@ -65,17 +65,17 @@ if %errorlevel%==9009 goto backto
 if %errorlevel%==9059 goto backto
 if %errorlevel%==4 goto backto
 echo [%date% %time%]---------->>running.log
-echo [%date% %time%]å‘ç”ŸæœªæŒ‡å®šé”™è¯¯>>running.log
-echo [%date% %time%]é”™è¯¯ä»£ç :%errorlevel%>>running.log
+echo [%date% %time%]·¢ÉúÎ´Ö¸¶¨´íÎó>>running.log
+echo [%date% %time%]´íÎó´úÂë:%errorlevel%>>running.log
 echo.
-echo ä½ çš„ç¨‹åºé‡åˆ°é—®é¢˜ï¼Œéœ€è¦é€€å‡ºã€‚
-echo è¯·æŒ‰ä»»æ„é”®ä»¥é€€å‡ºç¨‹åºã€‚
-echo å¦‚æžœéœ€è¦å¸®åŠ©ï¼Œè¯·å‘å¼€å‘è€…æä¾›running.logã€‚
-echo é”™è¯¯ä»£ç ï¼š%errorlevel%
-echo *** æ­¤åŠŸèƒ½å¤„äºŽæµ‹è¯•é˜¶æ®µ
-echo *** å¦‚æžœä½ å‘çŽ°åœ¨è¿›è¡Œç³»ç»Ÿæ“ä½œæ—¶å‡ºé”™è€Œä½¿ç¨‹åºæ˜¾ç¤ºæ­¤å†…å®¹ï¼Œè¯·å°†running.logæäº¤è‡³Issues
+echo ÄãµÄ³ÌÐòÓöµ½ÎÊÌâ£¬ÐèÒªÍË³ö¡£
+echo Çë°´ÈÎÒâ¼üÒÔÍË³ö³ÌÐò¡£
+echo Èç¹ûÐèÒª°ïÖú£¬ÇëÏò¿ª·¢ÕßÌá¹©running.log¡£
+echo ´íÎó´úÂë£º%errorlevel%
+echo *** ´Ë¹¦ÄÜ´¦ÓÚ²âÊÔ½×¶Î
+echo *** Èç¹ûÄã·¢ÏÖÔÚ½øÐÐÏµÍ³²Ù×÷Ê±³ö´í¶øÊ¹³ÌÐòÏÔÊ¾´ËÄÚÈÝ£¬Çë½«running.logÌá½»ÖÁIssues
 set errorlevel=0
 pause
-echo [%date% %time%]é€€å‡º>>running.log
+echo [%date% %time%]ÍË³ö>>running.log
 exit
 if NOT %errorlevel%==0 goto err
