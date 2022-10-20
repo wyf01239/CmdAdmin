@@ -1,6 +1,12 @@
 set pluginname=%0
 title Wyfadin - Plugin "%pluginname:plugins\=%"
 rem ----------
+echo 确定继续运行?(y(yes)/n(no))
+set /p yn=^>^>
+if %yn%==y goto yes
+if %yn%==Y goto yes
+if %yn%==yes goto yes
+goto end
 cls
 echo 哼
 timeout /t 1 /nobreak>nul
@@ -16,5 +22,6 @@ cls
 echo %test%
 set test=%test%啊
 goto test
+:end
 rem ----------
 admin back
