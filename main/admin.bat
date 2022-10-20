@@ -1,6 +1,6 @@
 @echo off
 title wyfadmin
-set wver=Beta 2.1.0
+set wver=Beta 0.3.1
 if %1==launch goto go
 if %1==back goto goto
 :go
@@ -12,6 +12,5 @@ echo [%date% %time%]Progran started>>running.log
 :goto
 echo [%date% %time%]Waiting command>>running.log
 set /p com=^>^>
-echo [%date% %time%]Command:%com%>>running.log
 io %com%
 exit
