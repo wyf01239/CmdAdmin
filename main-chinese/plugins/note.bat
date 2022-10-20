@@ -1,4 +1,3 @@
-rem зїеп:wyf9 2022.10.3
 @echo off
 set pluginname=%0
 title Wyfadin - Plugin "%pluginname:plugins\=%"
