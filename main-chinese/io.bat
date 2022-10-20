@@ -1,5 +1,5 @@
-set wver=Beta 0.3.0
-set wvdate=2022.10.7
+set wver=Beta 0.3.1
+set wvdate=2022.10.20
 :go
 if %1==exit goto exit
 if %1==dellog goto dlog

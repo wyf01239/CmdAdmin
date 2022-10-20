@@ -1,5 +1,5 @@
 title wyfadmin
-set wver=Beta 0.3.0
+set wver=Beta 0.3.1
 if %1==launch goto go
 if %1==back goto goto
 :go
