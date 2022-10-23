@@ -29,8 +29,6 @@ echo [%date% %time%]执行命令:"%com%">>running.log
 %0 %com%
 exit
 :back
-if NOT %errorlevel%==0 goto err
-:backto
 echo [%date% %time%]无错误返回>>running.log
 %0 back
 :exit
@@ -59,23 +57,4 @@ goto back
 echo None
 echo [%date% %time%]显示内置帮助>>running.log
 goto back
-:err
-if %errorlevel%==1 goto backto
-if %errorlevel%==9009 goto backto
-if %errorlevel%==9059 goto backto
-if %errorlevel%==4 goto backto
-echo [%date% %time%]---------->>running.log
-echo [%date% %time%]发生未指定错误>>running.log
-echo [%date% %time%]错误代码:%errorlevel%>>running.log
-echo.
-echo 你的程序遇到问题，需要退出。
-echo 请按任意键以退出程序。
-echo 如果需要帮助，请向开发者提供running.log。
-echo 错误代码：%errorlevel%
-echo *** 此功能处于测试阶段
-echo *** 如果你发现在进行系统操作时出错而使程序显示此内容，请将running.log提交至Issues
-set errorlevel=0
-pause
-echo [%date% %time%]退出>>running.log
-exit
-if NOT %errorlevel%==0 goto err
+
