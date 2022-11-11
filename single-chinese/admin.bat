@@ -1,12 +1,12 @@
 @echo off
 set wver=Beta 0.3.1
-set wvdate=2022.10.29
+set wvdate=2022.10.30
 title wyfadmin
 if %1==launch goto go
 if %1==wback goto command
 if %1==exit goto exit
-if %1==dellog goto dlog
-if %1==wver goto wyfver
+if %1==wdellog goto wdellog
+if %1==wver goto wver
 if %1==whelp goto whelp
 echo [%date% %time%]输入非预设命令>>running.log
 %1 %2 %3 %4 %5 %6 %7 %8 %9
@@ -32,10 +32,10 @@ echo [%date% %time%]无错误返回>>running.log
 :exit
 echo [%date% %time%]程序退出>>running.log
 exit
-:dlog
+:wdellog
 del running.log
 exit
-:wyfver
+:wver
 echo wyfadmin 版本：%wver%
 echo 打包日期：%wvdate%
 echo 版权所有 wyf9. 保留所有权.
@@ -45,7 +45,10 @@ echo 网站: wyf9.bj.bcebos.com
 echo [%date% %time%]显示版本信息>>running.log
 goto wback
 :whelp
-echo None
+echo 内部命令:
+echo exit           退出程序
+echo dellog         删除日志文件(running.log)并退出
+echo wver           
 echo [%date% %time%]显示内置帮助>>running.log
 goto wback
 
