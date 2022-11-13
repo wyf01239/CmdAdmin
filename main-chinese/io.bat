@@ -2,7 +2,7 @@ set wver=Beta 0.3.1
 set wvdate=2022.10.20
 :go
 if %1==exit goto exit
-if %1==dellog goto dlog
+if %1==wdellog goto dlog
 if %1==wver goto wver
 if %1==whelp goto whelp
 if %1==wplugins goto wsplugin
@@ -38,7 +38,7 @@ echo 内部命令:
 echo exit          退出程序
 echo dellog        删除日志文件(running.log)并退出
 echo wver          显示版本信息
-echo whelp         显示此提示
+echo whelp         显示此帮助信息
 echo wplugins      显示插件列表
 echo.
 echo [%date% %time%]显示内置帮助>>running.log

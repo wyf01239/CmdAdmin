@@ -9,7 +9,7 @@ if %1==read goto read
 if %1==new goto new
 if %1==del goto delnote
 if %1==all goto all
-if %1==exit admin back
+if %1==exit admin wback
 goto end
 :help
 echo √¸¡Ó:
@@ -46,4 +46,4 @@ echo.
 goto end
 :end
 rem ----------
-admin back
+admin wback

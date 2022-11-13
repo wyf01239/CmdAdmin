@@ -1,14 +1,17 @@
 @echo off
 set wver=Beta 0.3.1
-set wvdate=2022.10.30
+set wvdate=2022.11.13
 title wyfadmin
 if %1==launch goto go
-if %1==wback goto command
+if %1==wback goto goto
 if %1==exit goto exit
 if %1==wdellog goto wdellog
 if %1==wver goto wver
 if %1==whelp goto whelp
+if %1==wplugins goto wsplugin
 echo [%date% %time%]输入非预设命令>>running.log
+if exist plugins\%1 goto wopenplugin
+if exist plugins\%1.bat goto wopenplugin
 %1 %2 %3 %4 %5 %6 %7 %8 %9
 goto wback
 :go
@@ -20,7 +23,7 @@ echo Wyfadmin 版本：%wver%.
 echo 版权所有 wyf9. 保留所有权.
 echo 系统时间；%date% %time%
 echo [%date% %time%]正常启动>>running.log
-:command
+:goto
 echo [%date% %time%]等待命令>>running.log
 set /p com=^>^>
 echo [%date% %time%]执行命令:"%com%">>running.log
@@ -29,6 +32,9 @@ exit
 :wback
 echo [%date% %time%]无错误返回>>running.log
 %0 wback
+:wopenplugin
+echo [%date% %time%]运行插件: "%1">>running.log
+plugins\%1 %2 %3 %4 %5 %6 %7 %8 %9
 :exit
 echo [%date% %time%]程序退出>>running.log
 exit
@@ -47,8 +53,13 @@ goto wback
 :whelp
 echo 内部命令:
 echo exit           退出程序
-echo dellog         删除日志文件(running.log)并退出
-echo wver           
+echo wdellog        删除日志文件(running.log)并退出
+echo wver           显示版本信息
+echo whelp          显示此帮助信息
+echo wplugins       显示插件列表
 echo [%date% %time%]显示内置帮助>>running.log
 goto wback
-
+:wsplugin
+dir /a:-d-h-s /b plugins\
+echo.
+goto wback

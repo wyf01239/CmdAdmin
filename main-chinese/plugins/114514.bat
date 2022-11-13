@@ -24,4 +24,4 @@ set test=%test%°¡
 goto test
 :end
 rem ----------
-admin back
+admin wback
