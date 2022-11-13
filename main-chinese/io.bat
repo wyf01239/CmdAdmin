@@ -36,7 +36,7 @@ goto wback
 :whelp
 echo 内部命令:
 echo exit          退出程序
-echo dellog        删除日志文件(running.log)并退出
+echo wdellog        删除日志文件(running.log)并退出
 echo wver          显示版本信息
 echo whelp         显示此帮助信息
 echo wplugins      显示插件列表

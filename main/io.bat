@@ -3,7 +3,7 @@ set wvdate=2022.10.20
 :go
 echo [%date% %time%]Command:%1 %2 %3 %4 %5 %6 %7 %8 %9>>running.log
 if %1==exit goto exit
-if %1==dellog goto dlog
+if %1==wdellog goto dlog
 if %1==wver goto wver
 if %1==whelp goto whelp
 if %1==wplugins goto wsplugin
@@ -36,7 +36,7 @@ goto wback
 :whelp
 echo Commands:
 echo exit        Close this program.
-echo dellog      Delete "running.log" and exit.
+echo wdellog      Delete "running.log" and exit.
 echo wver        Show version info.
 echo whelp       Show this help.
 echo wplugins    Show plugins list.

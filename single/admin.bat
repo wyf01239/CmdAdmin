@@ -5,7 +5,7 @@ title wyfadmin
 if %1==launch goto go
 if %1==wback goto goto
 if %1==exit goto exit
-if %1==dellog goto dlog
+if %1==wdellog goto dlog
 if %1==wver goto wver
 if %1==whelp goto whelp
 echo [%date% %time%]Input other command>>running.log
@@ -44,7 +44,11 @@ echo website: wyf9.bj.bcebos.com
 echo [%date% %time%]Show version info>>running.log
 goto wback
 :whelp
-echo None
+echo helps:
+echo exit         Close this program.
+echo wver         Show version info.
+echo whelp        Show helps.
+echo wdellog      Delete "running.log" and exit.
 echo [%date% %time%]Show helps>>running.log
 goto wback
 
