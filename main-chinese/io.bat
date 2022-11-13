@@ -6,7 +6,7 @@ if %1==wdellog goto dlog
 if %1==wver goto wver
 if %1==whelp goto whelp
 if %1==wplugins goto wsplugin
-echo [%date% %time%]输入非预设命令>>running.log
+echo [%date% %time%]执行非内部命令>>running.log
 if exist plugins\%1 goto wopenplugin
 if exist plugins\%1.bat goto wopenplugin
 %1 %2 %3 %4 %5 %6 %7 %8 %9

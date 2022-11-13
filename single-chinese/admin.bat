@@ -9,7 +9,7 @@ if %1==wdellog goto wdellog
 if %1==wver goto wver
 if %1==whelp goto whelp
 if %1==wplugins goto wsplugin
-echo [%date% %time%]输入非预设命令>>running.log
+echo [%date% %time%]执行非内部命令>>running.log
 if exist plugins\%1 goto wopenplugin
 if exist plugins\%1.bat goto wopenplugin
 %1 %2 %3 %4 %5 %6 %7 %8 %9
@@ -30,7 +30,7 @@ echo [%date% %time%]执行命令:"%com%">>running.log
 %0 %com%
 exit
 :wback
-echo [%date% %time%]无错误返回>>running.log
+echo [%date% %time%]返回>>running.log
 %0 wback
 :wopenplugin
 echo [%date% %time%]运行插件: "%1">>running.log
