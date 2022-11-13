@@ -35,6 +35,7 @@ echo [%date% %time%]返回>>running.log
 :wopenplugin
 echo [%date% %time%]运行插件: "%1">>running.log
 plugins\%1 %2 %3 %4 %5 %6 %7 %8 %9
+goto wback
 :exit
 echo [%date% %time%]程序退出>>running.log
 exit
@@ -60,6 +61,7 @@ echo wplugins       显示插件列表
 echo [%date% %time%]显示内置帮助>>running.log
 goto wback
 :wsplugin
+echo plugins:
 dir /a:-d-h-s /b plugins\
 echo.
 goto wback
