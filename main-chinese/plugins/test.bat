@@ -6,4 +6,4 @@ if %2==2 echo test plugin
 if %2==3 echo a test plugin
 if %2==4 echo this is a test plugin
 rem ----------
-admin back
+admin wback
