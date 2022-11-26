@@ -1,5 +1,5 @@
 @echo off
-title notes - loading
+title Wyfadin - %pluginname:plugins\=% - loading
 mode con cols=73 lines=11
 if not exist plugins\notes\ md plugins\notes
 if %1==startup goto startup
@@ -18,13 +18,13 @@ if %1==10 echo x %2 %3 %4 %5 %6 %7 %8 %9>plugins\notes\note10.txt&&goto go
 if %1==delall del /q plugins\notes\&&goto startup
 goto go
 :helps
-echo /notes 1 abc
-echo /notes delall
-echo /notes help
-echo /notes exit
+echo /1 abc
+echo /delall
+echo /help
+echo /exit
 goto goto
 :startup
-title notes - startup
+title Wyfadin - %pluginname:plugins\=% - startup
 if not exist plugins\notes\note1.txt echo 1 >plugins\notes\note1.txt
 if not exist plugins\notes\note2.txt echo 2 >plugins\notes\note2.txt
 if not exist plugins\notes\note3.txt echo 3 >plugins\notes\note3.txt
@@ -36,7 +36,7 @@ if not exist plugins\notes\note8.txt echo 8 >plugins\notes\note8.txt
 if not exist plugins\notes\note9.txt echo 9 >plugins\notes\note9.txt
 if not exist plugins\notes\note10.txt echo x >plugins\notes\note10.txt
 :go
-title notes - finish
+title Wyfadin - %pluginname:plugins\=% - finish
 cls
 type plugins\notes\note1.txt
 type plugins\notes\note2.txt

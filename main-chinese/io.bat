@@ -1,3 +1,4 @@
+@echo off
 set wver=Beta 0.3.1
 set wvdate=2022.10.20
 :go

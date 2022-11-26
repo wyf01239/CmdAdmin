@@ -1,6 +1,6 @@
 @echo off
 set pluginname=%0
-title Wyfadin - Plugin "%pluginname:plugins\=%"
+title Wyfadin - %pluginname:plugins\=%
 rem ----------
 echo 您正在使用旧版本的提示插件 新版本:notes  by wyf9
 if not exist plugins\notes\ md plugins\notes\

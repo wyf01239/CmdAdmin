@@ -1,5 +1,6 @@
+@echo off
 set pluginname=%0
-title Wyfadin - Plugin "%pluginname:plugins\=%"
+title Wyfadin - %pluginname:plugins\=%
 rem ----------
 echo 确定继续运行?(y(yes)/n(no))
 set /p yn=^>^>
