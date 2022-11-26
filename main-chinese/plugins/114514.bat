@@ -8,6 +8,7 @@ if %yn%==y goto yes
 if %yn%==Y goto yes
 if %yn%==yes goto yes
 goto end
+:yes
 cls
 echo ºß
 timeout /t 1 /nobreak>nul
