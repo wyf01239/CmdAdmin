@@ -11,6 +11,7 @@ echo 系统时间: %date% %time%
 echo [%date% %time%]正常启动>>running.log
 :goto
 echo [%date% %time%]等待命令>>running.log
+set com=null
 set /p com=^>^>
 echo [%date% %time%]执行命令: "%com%">>running.log
 io %com%

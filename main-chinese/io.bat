@@ -3,10 +3,12 @@ set wver=Beta 0.3.1
 set wvdate=2022.10.20
 :go
 if %1==exit goto exit
+if %1==null goto wback
 if %1==wdellog goto dlog
 if %1==wver goto wver
 if %1==whelp goto whelp
 if %1==wplugins goto wsplugin
+if %1==wsetupplugin goto wsetupp
 echo [%date% %time%]执行非内部命令>>running.log
 if exist plugins\%1 goto wopenplugin
 if exist plugins\%1.bat goto wopenplugin
@@ -46,7 +48,18 @@ echo [%date% %time%]显示内置帮助>>running.log
 goto wback
 :wsplugin
 echo.
+echo 已安装的插件列表:
+dir /a:-d-h-s /b plugins\
+echo.
+echo 可在(None)获取插件.
+echo [%date% %time%]显示插件列表>>running.log
+echo.
+goto wback
+:wsetupp
+copy %2 plugins\>nul
+echo 已安装 "%2" 到 plugins\
 echo 插件列表:
 dir /a:-d-h-s /b plugins\
 echo.
+echo [%date% %time%]安装插件: "%2">>running.log
 goto wback
