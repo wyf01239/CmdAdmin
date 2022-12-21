@@ -86,7 +86,7 @@ if %b1%==°× if %b2%==°× if %b3%==°× goto mode1whitewin
 if %c1%==°× if %c2%==°× if %c3%==°× goto mode1whitewin
 if %a1%==°× if %b1%==°× if %c1%==°× goto mode1whitewin
 if %a2%==°× if %b2%==°× if %c2%==°× goto mode1whitewin
-if %a3%==°× if %a3%==°× if %c3%==°× goto mode1whitewin
+if %a3%==°× if %b3%==°× if %c3%==°× goto mode1whitewin
 if %a1%==°× if %b2%==°× if %c3%==°× goto mode1whitewin
 if %a3%==°× if %b2%==°× if %c1%==°× goto mode1whitewin
 if not %a1%==ÎÞ if not %a3%==ÎÞ if not %b2%==ÎÞ if not %c1%==ÎÞ if not %c3%==ÎÞ goto nowin
@@ -128,7 +128,7 @@ if %b1%==ºÚ if %b2%==ºÚ if %b3%==ºÚ goto mode1blackwin
 if %c1%==ºÚ if %c2%==ºÚ if %c3%==ºÚ goto mode1blackwin
 if %a1%==ºÚ if %b1%==ºÚ if %c1%==ºÚ goto mode1blackwin
 if %a2%==ºÚ if %b2%==ºÚ if %c2%==ºÚ goto mode1blackwin
-if %a3%==ºÚ if %a3%==ºÚ if %c3%==ºÚ goto mode1blackwin
+if %a3%==ºÚ if %b3%==ºÚ if %c3%==ºÚ goto mode1blackwin
 if %a1%==ºÚ if %b2%==ºÚ if %c3%==ºÚ goto mode1blackwin
 if %a3%==ºÚ if %b2%==ºÚ if %c1%==ºÚ goto mode1blackwin
 if not %a1%==ÎÞ if not %a3%==ÎÞ if not %b2%==ÎÞ if not %c1%==ÎÞ if not %c3%==ÎÞ goto nowin
