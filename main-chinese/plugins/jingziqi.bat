@@ -90,6 +90,7 @@ if %a3%==°× if %b3%==°× if %c3%==°× goto mode1whitewin
 if %a1%==°× if %b2%==°× if %c3%==°× goto mode1whitewin
 if %a3%==°× if %b2%==°× if %c1%==°× goto mode1whitewin
 if not %a1%==ÎÞ if not %a3%==ÎÞ if not %b2%==ÎÞ if not %c1%==ÎÞ if not %c3%==ÎÞ goto nowin
+if %alltick%==8 goto nowin
 goto mode1black
 :mode1black
 set jzqnow=b
@@ -132,6 +133,7 @@ if %a3%==ºÚ if %b3%==ºÚ if %c3%==ºÚ goto mode1blackwin
 if %a1%==ºÚ if %b2%==ºÚ if %c3%==ºÚ goto mode1blackwin
 if %a3%==ºÚ if %b2%==ºÚ if %c1%==ºÚ goto mode1blackwin
 if not %a1%==ÎÞ if not %a3%==ÎÞ if not %b2%==ÎÞ if not %c1%==ÎÞ if not %c3%==ÎÞ goto nowin
+if %alltick%==8 goto nowin
 goto mode1white
 :mode1whitewin
 cls
@@ -198,3 +200,4 @@ if %wzqchoose%==q goto started
 goto nowin2
 
 :mode2start
+echo 1145141919810
