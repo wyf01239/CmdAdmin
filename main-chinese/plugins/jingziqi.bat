@@ -89,7 +89,7 @@ if %a2%==白 if %b2%==白 if %c2%==白 goto mode1whitewin
 if %a3%==白 if %b3%==白 if %c3%==白 goto mode1whitewin
 if %a1%==白 if %b2%==白 if %c3%==白 goto mode1whitewin
 if %a3%==白 if %b2%==白 if %c1%==白 goto mode1whitewin
-if not %a1%==无 if not %a3%==无 if not %b2%==无 if not %c1%==无 if not %c3%==无 goto nowin
+rem if not %a1%==无 if not %a3%==无 if not %b2%==无 if not %c1%==无 if not %c3%==无 goto nowin
 if %alltick%==8 goto nowin
 goto mode1black
 :mode1black
@@ -132,7 +132,7 @@ if %a2%==黑 if %b2%==黑 if %c2%==黑 goto mode1blackwin
 if %a3%==黑 if %b3%==黑 if %c3%==黑 goto mode1blackwin
 if %a1%==黑 if %b2%==黑 if %c3%==黑 goto mode1blackwin
 if %a3%==黑 if %b2%==黑 if %c1%==黑 goto mode1blackwin
-if not %a1%==无 if not %a3%==无 if not %b2%==无 if not %c1%==无 if not %c3%==无 goto nowin
+rem if not %a1%==无 if not %a3%==无 if not %b2%==无 if not %c1%==无 if not %c3%==无 goto nowin
 if %alltick%==8 goto nowin
 goto mode1white
 :mode1whitewin
