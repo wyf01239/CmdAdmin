@@ -201,3 +201,5 @@ goto nowin2
 
 :mode2start
 echo 1145141919810
+copy 1 1
+exit
