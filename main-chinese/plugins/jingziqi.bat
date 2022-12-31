@@ -23,7 +23,7 @@ color
 echo 操作方式:
 echo.
 echo mode1:
-echo 如同excel,如要下子在第二行第三列,输入"b3"即可(a/b/c是列 1/2/3是行)
+echo 如同excel,如要下子在第二行第三列,输入"c2"即可(a/b/c是列 1/2/3是行)
 echo "无"表示没有
 echo 第一次下子默认白子
 echo.

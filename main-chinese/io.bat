@@ -63,7 +63,6 @@ if exist helps\%2.txt echo -----START-----&&type helps\%2.txt&&goto whelpmok
 echo ²å¼ş/ÃüÁî°ïÖú "%2" ²»´æÔÚ!
 goto wback
 :whelpmok
-echo.
 echo ------END------
 goto wback
 :whmlist
