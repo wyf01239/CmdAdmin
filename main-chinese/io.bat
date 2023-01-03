@@ -2,10 +2,13 @@
 set wver=Beta 0.3.1
 set wvdate=2022.10.20
 :go
+if "%1"==" " admin ioopen
+if "%1"=="" admin ioopen
 if %1==exit goto exit
 if %1==null goto wback
 if %1==wsetuppluginalldone goto wsetuppalldone
 if %1==cd goto nocd
+if %1==cd.. goto nocd
 if %1==wdellog goto dlog
 if %1==wver goto wver
 if %1==whelp goto whelp
@@ -63,6 +66,7 @@ if exist helps\%2.txt echo -----START-----&&type helps\%2.txt&&goto whelpmok
 echo 插件/命令帮助 "%2" 不存在!
 goto wback
 :whelpmok
+echo.
 echo ------END------
 goto wback
 :whmlist
@@ -82,6 +86,8 @@ echo [%date% %time%]显示插件列表>>running.log
 echo.
 goto wback
 :wsetupp
+if "%2"=="" io whelpmore wsetupplugin
+if "%2"==" " io whelpmore wsetupplugin
 if %2==-all goto wsetuppall
 if %2==-onlyexe goto wsetupponlyexe
 goto wback

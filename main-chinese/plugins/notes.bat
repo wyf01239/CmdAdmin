@@ -2,6 +2,8 @@
 title Wyfadin - %pluginname:plugins\=% - loading
 mode con cols=73 lines=11
 if not exist plugins\notes\ md plugins\notes
+if "%1"=="" goto startup
+if "%1"==" " goto startup
 if %1==startup goto startup
 if %1==help goto helps
 if %1==exit mode con cols=120 lines=30&&admin wback

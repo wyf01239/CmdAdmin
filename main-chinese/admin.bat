@@ -1,8 +1,11 @@
 @echo off
 title wyfadmin
 set wver=Beta 0.3.1
+if "%1"=="" goto goto
+if "%1"==" " goto goto
 if %1==launch goto go
 if %1==wback goto goto
+if %1==ioopen goto ioopen
 :go
 echo [%date% %time%]版本号:%wver%>>running.log
 echo Wyfadmin 版本：%wver%.
@@ -16,3 +19,6 @@ set /p com=^>^>
 echo [%date% %time%]执行命令: "%com%">>running.log
 io %com%
 exit
+:ioopen
+echo [%date% %time%]**********可能从io启动>>running.log
+goto goto

@@ -1,6 +1,8 @@
 @echo off
 set pluginname=%0
 title Wyfadin - %pluginname:plugins\=%
+if "%1"=="" io whelpmore wtest
+if "%1"==" " io whelpmore wtest
 if %1==/install goto install
 rem ----------
 if %1==1 echo test

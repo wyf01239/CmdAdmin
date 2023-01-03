@@ -5,6 +5,8 @@ rem ----------
 echo 您正在使用旧版本的提示插件 新版本:notes  by wyf9
 if not exist plugins\notes\ md plugins\notes\
 echo.
+if "%1"=="" goto help
+if "%1"==" " goto help
 if %1==help goto help
 if %1==read goto read
 if %1==new goto new
