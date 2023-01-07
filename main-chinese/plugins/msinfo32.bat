@@ -7,18 +7,18 @@ if %1==get-txt goto gettingtxt
 admin wback
 :installing
 if exist helps\msinfo32.txt del helps\msinfo32.txt
-插件:msinfo32 v1.0
-by wyf9.2023.1.7
-引用:msinfo32.exe
-
-msinfo32 {get/get-txt} [file]
-get:输出系统信息(.nfo), 能使用msinfo32.exe打开
-get-txt:输出系统信息(.txt), 能直接使用记事本打开
-file:要输出到的文件(不带后缀)
-
-示例:
-msinfo32 get testfile
-msinfo32 get-txt e:\wyf9Desktop\testtxt
+echo 插件:msinfo32 v1.0>>plugins\msinfo32.txt
+echo by wyf9.2023.1.7>>plugins\msinfo32.txt
+echo 引用:msinfo32.exe>>plugins\msinfo32.txt
+echo.>>plugins\msinfo32.txt
+echo msinfo32 {get/get-txt} [file]>>plugins\msinfo32.txt
+echo get:输出系统信息(.nfo), 能使用msinfo32.exe打开>>plugins\msinfo32.txt
+echo get-txt:输出系统信息(.txt), 能直接使用记事本打开>>plugins\msinfo32.txt
+echo file:要输出到的文件(不带后缀)>>plugins\msinfo32.txt
+echo.>>plugins\msinfo32.txt
+echo 示例:>>plugins\msinfo32.txt
+echo msinfo32 get testfile>>plugins\msinfo32.txt
+echo msinfo32 get-txt e:\wyf9Desktop\testtxt>>plugins\msinfo32.txt
 
 
 :getting
