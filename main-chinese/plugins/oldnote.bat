@@ -3,7 +3,7 @@ set pluginname=%0
 title Wyfadin - %pluginname:plugins\=%
 rem ----------
 echo 您正在使用旧版本的提示插件 新版本:notes  by wyf9
-if not exist plugins\notes\ md plugins\notes\
+if not exist data\notes\ md data\notes\
 echo.
 if "%1"=="" goto help
 if "%1"==" " goto help
@@ -25,26 +25,26 @@ echo.
 goto end
 echo.
 :new
-echo %3>plugins\notes\note_%2.txt
-echo 已创建一条提示: "%2" ,内容: "%3" ,位于 "%cd%\plugins\notes\note_%2.txt".
+echo %3>data\notes\note_%2.txt
+echo 已创建一条提示: "%2" ,内容: "%3" ,位于 "%cd%\data\notes\note_%2.txt".
 echo.
 goto end
 :delnote
 echo 内容:
-type plugins\notes\note_%2.txt
+type data\notes\note_%2.txt
 echo.
-del plugins\notes\note_%2.txt
+del data\notes\note_%2.txt
 echo 已删除提示 "%2".
 echo.
 goto end
 :read
 echo "%2" 的内容:
-type plugins\notes\note_%2.txt
+type data\notes\note_%2.txt
 echo.
 goto end
 :all
 echo 提示列表:
-dir /a:-d-h-s /b plugins\notes
+dir /a:-d-h-s /b data\notes
 echo.
 goto end
 :end
