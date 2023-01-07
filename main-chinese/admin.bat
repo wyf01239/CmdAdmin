@@ -1,6 +1,6 @@
 @echo off
 title wyfadmin
-set wver=Beta 0.3.1
+set wver=Beta 0.4
 if "%1"=="" goto goto
 if "%1"==" " goto goto
 if %1==launch goto go
@@ -20,5 +20,5 @@ echo [%date% %time%]执行命令: "%com%">>running.log
 io %com%
 exit
 :ioopen
-echo [%date% %time%]**********可能从io启动>>running.log
+echo [%date% %time%]*可能从io启动>>running.log
 goto goto

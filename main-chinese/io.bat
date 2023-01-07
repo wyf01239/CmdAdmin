@@ -1,6 +1,6 @@
 @echo off
-set wver=Beta 0.3.1
-set wvdate=2022.10.20
+set wver=Beta 0.4
+set wvdate=2023.1.7
 :go
 if "%1"==" " admin ioopen
 if "%1"=="" admin ioopen
