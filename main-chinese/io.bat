@@ -98,7 +98,6 @@ plugins\%setuppluginname% /install
 :wsetuppalldone
 echo 已安装 "%setuppluginname%" 到 plugins\
 echo 更多帮助可用,执行"whelpmore %setuppluginname%"
-echo.
 echo [%date% %time%]安装插件: "%3",完整安装>>running.log
 goto wback
 :wsetupponlyexe
@@ -106,6 +105,5 @@ copy %3 plugins\>nul
 set setuppluginname=%~n1%~x1
 echo 已安装 "%setuppluginname%" 到 plugins\
 echo 未包含更多帮助信息
-echo.
 echo [%date% %time%]安装插件: "%3",仅安装主程序>>running.log
 goto wback
