@@ -1,10 +1,11 @@
 @echo off
 title Wyfadin - %pluginname:plugins\=% - loading
-mode con cols=73 lines=11
 if not exist plugins\notes\ md plugins\notes
+if "%1"=="" goto startup
+if "%1"==" " goto startup
 if %1==startup goto startup
 if %1==help goto helps
-if %1==exit mode con cols=120 lines=30&&admin wback
+if %1==exit admin wback
 if %1==1 echo 1 %2 %3 %4 %5 %6 %7 %8 %9>plugins\notes\note1.txt&&goto go
 if %1==2 echo 2 %2 %3 %4 %5 %6 %7 %8 %9>plugins\notes\note2.txt&&goto go
 if %1==3 echo 3 %2 %3 %4 %5 %6 %7 %8 %9>plugins\notes\note3.txt&&goto go

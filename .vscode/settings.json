@@ -1,4 +1,5 @@
 {
     "files.encoding": "gbk",
-    "terminal.integrated.defaultProfile.windows": "Command Prompt"
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "files.autoGuessEncoding": true
 }
