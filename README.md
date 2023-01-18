@@ -1,4 +1,7 @@
 # Wyfadmin
+
+[![Join the chat at https://gitter.im/wyf01239/wyfadmin](https://badges.gitter.im/wyf01239/wyfadmin.svg)](https://gitter.im/wyf01239/wyfadmin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 中文版 README: Click [here](README_Chinese.md) (README_Chinese.md)
 ## What is "Wyfadmin" project?
 Wyfadmin is a toolbox Based on Batch.
