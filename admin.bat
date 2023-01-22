@@ -1,15 +1,6 @@
 @echo off
 title Wyfadmin
 set wver=Beta 0.4
-set /p lang_now=<data\lang_now.txt
-set /p lang_admin_log_ioopen=<langs\%lang_now%\admin_log_ioopen.txt
-set /p lang_admin_log_nowrun=<langs\%lang_now%\admin_log_nowrun.txt
-set /p lang_admin_log_started=<langs\%lang_now%\admin_log_started.txt
-set /p lang_admin_log_ver=<langs\%lang_now%\admin_log_ver.txt
-set /p lang_admin_log_waiting=<langs\%lang_now%\admin_log_waiting.txt
-set /p lang_admin_show_by=<langs\%lang_now%\admin_show_by.txt
-lang_admin_show_time=<langs\%lang_now%\admin_show_time.txt
-lang_admin_show_ver=<langs\%lang_now%\admin_show_ver.txt
 if "%1"=="" launcher
 if "%1"==" " launcher
 if %1==launch goto go
