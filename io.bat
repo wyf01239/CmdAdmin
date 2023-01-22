@@ -113,14 +113,14 @@ if exist langs\%2 goto clanggo
 io whelpmore changelang
 exit
 :clang2
-echo 现在的语言配置: %lang_now%
-echo 可用的语言配置:
+echo %lang_io_show_changelang_1%%lang_now%
+echo %lang_io_show_changelang_2%
 dir /a:d /b langs\
-echo 可用 "clang 语言配置" 来切换到某个语言配置 (需要重新启动程序)
+echo %lang_io_show_changelang_3%
 goto wback
 :clanggo
 echo %2>data\lang_now.txt
-echo 语言配置已改为: %2
-echo 如果程序在启动时崩溃, 请执行修复程序 (repair.bat) 以修复语言文件.
-echo [%date% %time%]切换语言配置为: "%2"
+echo %lang_io_show_changelang_4%%2
+echo %lang_io_show_changelang_5%
+echo [%date% %time%]%lang_io_log_changelang%"%2".
 goto wback
