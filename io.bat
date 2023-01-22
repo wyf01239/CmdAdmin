@@ -16,6 +16,7 @@ if %1==whelpmore goto whelpm
 if %1==wplugins goto wsplugin
 if %1==whmlist goto whmlist
 if %1==wsetupplugin goto wsetupp
+if %1==changelang goto clang
 echo [%date% %time%]%lang_io_log_runother%>>running.log
 if exist plugins\%1 goto wopenplugin
 if exist plugins\%1.bat goto wopenplugin
@@ -104,4 +105,22 @@ set setuppluginname=%~n1%~x1
 echo %lang_io_show_wsetupplugin_onlyexe_1_1%"%setuppluginname%"%lang_io_show_wsetupplugin_onlyexe_1_2%
 echo %lang_io_show_wsetupplugin_onlyexe_2%
 echo [%date% %time%]%lang_io_log_wsetupplugin_onlyexe_1%"%3"%lang_io_log_wsetupplugin_onlyexe_2%>>running.log
+goto wback
+:clang
+if "%2"=="" goto clang2
+if "%2"==" " goto clang2
+if exist langs\%2 goto clanggo
+io whelpmore changelang
+exit
+:clang2
+echo 现在的语言配置: %lang_now%
+echo 可用的语言配置:
+dir /a:d /b langs\
+echo 可用 "clang 语言配置" 来切换到某个语言配置 (需要重新启动程序)
+goto wback
+:clanggo
+echo %2>data\lang_now.txt
+echo 语言配置已改为: %2
+echo 如果程序在启动时崩溃, 请执行修复程序 (repair.bat) 以修复语言文件.
+echo [%date% %time%]切换语言配置为: "%2"
 goto wback
