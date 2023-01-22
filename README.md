@@ -10,7 +10,7 @@ This project started in 2020.
 
 Old repo: [Here](https://github.com/wyf01239/wyfadmin_old) (wyf01239 / wyfadmin_old)
 ## Download
-Please visit: [Here](https://wyf9.wvvm.cf)(https://wyf9.wvvm.cf)
+Please visit: [Here](https://wyf01239.github.com/projects/wyfadmin)(https://wyf01239.github.com/projects/wyfadmin)
 ## Other & Wiki
 If You are interested in this project or have suggestions, please [open Wiki](https://github.com/wyf01239/wyfadmin/wiki).
 
