@@ -1,1 +1,1 @@
-删除日志文件 (running.log) 并退出
+Delete "running.log" and quit.

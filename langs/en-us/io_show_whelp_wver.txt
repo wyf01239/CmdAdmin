@@ -1,1 +1,1 @@
-显示版本信息
+Show version.

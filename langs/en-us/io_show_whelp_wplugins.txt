@@ -1,1 +1,1 @@
-显示插件列表
+Show plugin list.

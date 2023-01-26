@@ -1,1 +1,1 @@
-°²×°²å¼þ
+Setup a plugin from a Batch file.

@@ -1,1 +1,1 @@
-查看插件/命令的详细信息
+View the details of the plugin/command

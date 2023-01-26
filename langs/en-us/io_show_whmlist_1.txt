@@ -1,1 +1,1 @@
-可以显示帮助的命令/插件:
+Commands/plugins that can display help:

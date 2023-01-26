@@ -4,7 +4,7 @@ echo [%date% %time%]Start load>>running.log
 title Wyfadmin
 echo Loading...
 set /p lang_now=<data\lang_now.txt
-echo Now lang: %lang_now%
+echo Now language: %lang_now%
 echo Loading language files...
 @echo on
 set /p lang_launcher_log_programstarted=<langs\%lang_now%\launcher_log_programstarted.txt
@@ -64,10 +64,10 @@ set /p lang_io_show_changelang_5=<langs\%lang_now%\io_log_changelang_5.txt
 set /p lang_io_show_changelang_6=<langs\%lang_now%\io_log_changelang_6.txt
 @echo off
 echo Load language files done.
-echo ==========>>running.log
+echo ---------->>running.log
 echo [%date% %time%]%lang_launcher_log_programstarted%>>running.log
 echo [%date% %time%]%lang_launcher_log_lang%>>running.log
-echo Wait a minute...
+echo Please wait...
 ping -n 1 127.0.0.1
 cls
 admin launch
