@@ -56,12 +56,11 @@ set /p lang_io_show_wver_3=<langs\%lang_now%\io_show_wver_3.txt
 set /p lang_io_show_wver_4=<langs\%lang_now%\io_show_wver_4.txt
 set /p lang_io_show_wver_5=<langs\%lang_now%\io_show_wver_5.txt
 set /p lang_io_log_changelang=<langs\%lang_now%\io_log_changelang.txt
-set /p lang_io_show_changelang_1=<langs\%lang_now%\io_log_changelang_1.txt
-set /p lang_io_show_changelang_2=<langs\%lang_now%\io_log_changelang_2.txt
-set /p lang_io_show_changelang_3=<langs\%lang_now%\io_log_changelang_3.txt
-set /p lang_io_show_changelang_4=<langs\%lang_now%\io_log_changelang_4.txt
-set /p lang_io_show_changelang_5=<langs\%lang_now%\io_log_changelang_5.txt
-set /p lang_io_show_changelang_6=<langs\%lang_now%\io_log_changelang_6.txt
+set /p lang_io_show_changelang_1=<langs\%lang_now%\io_show_changelang_1.txt
+set /p lang_io_show_changelang_2=<langs\%lang_now%\io_show_changelang_2.txt
+set /p lang_io_show_changelang_3=<langs\%lang_now%\io_show_changelang_3.txt
+set /p lang_io_show_changelang_4=<langs\%lang_now%\io_show_changelang_4.txt
+set /p lang_io_show_changelang_5=<langs\%lang_now%\io_show_changelang_5.txt
 @echo off
 echo Load language files done.
 echo ---------->>running.log
