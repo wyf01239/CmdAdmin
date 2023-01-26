@@ -67,7 +67,7 @@ echo ---------->>running.log
 echo [%date% %time%]%lang_launcher_log_programstarted%>>running.log
 echo [%date% %time%]%lang_launcher_log_lang%>>running.log
 echo Please wait...
-ping -n 1 127.0.0.1
+ping -n 1 127.0.0.1>nul
 cls
 admin launch
 exit

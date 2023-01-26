@@ -42,7 +42,7 @@ echo %lang_io_show_wver_1%%wver%
 echo %lang_io_show_wver_2%
 echo %lang_io_show_wver_3%%wvdate%
 echo %lang_io_show_wver_4%
-echo %lang_io_show_wver_5%
+echo %lang_io_show_wver_5%https://github.com/wyf01239/wyfadmin
 echo [%date% %time%]%lang_io_log_wver%>>running.log
 goto wback
 :whelp
