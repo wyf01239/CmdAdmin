@@ -2,6 +2,7 @@
 *.log
 note*.txt
 temp/*
-main-chinese/temp/*
-main-chinese/files/*
-main-chinese/data/*
+files/*
+data/*
+main-chinese_OLD/*
+main_OLD/*

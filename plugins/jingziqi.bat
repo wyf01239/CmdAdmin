@@ -16,7 +16,7 @@ if %jzqcom%==v goto version
 goto started
 :version
 cls
-echo ¾®×ÖÆå v1.0 by wyf9 and xhc861.2022.12.19
+echo ¾®×ÖÆå v1.0 by wyf9 and xhc861. 2022.12.19
 goto startnocls
 :wnewgame
 color
