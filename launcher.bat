@@ -1,12 +1,18 @@
 @echo off
+cls
 echo ==========>>running.log
 echo [%date% %time%]Start load>>running.log
 title Wyfadmin
 echo Loading...
+set lang_file_err=0
+if not exist data\lang_now.txt (
+	echo en-us>data\lang_now.txt
+	set lang_file_err=1
+)
 set /p lang_now=<data\lang_now.txt
 echo Now language: %lang_now%
+if %lang_file_err%==1 echo WARNING: Lang config lost. Change language to "en-us".
 echo Loading language files...
-@echo on
 set /p lang_launcher_log_programstarted=<langs\%lang_now%\launcher_log_programstarted.txt
 set /p lang_launcher_log_lang=<langs\%lang_now%\launcher_log_lang.txt
 set /p lang_admin_log_ioopen=<langs\%lang_now%\admin_log_ioopen.txt
@@ -61,13 +67,12 @@ set /p lang_io_show_changelang_2=<langs\%lang_now%\io_show_changelang_2.txt
 set /p lang_io_show_changelang_3=<langs\%lang_now%\io_show_changelang_3.txt
 set /p lang_io_show_changelang_4=<langs\%lang_now%\io_show_changelang_4.txt
 set /p lang_io_show_changelang_5=<langs\%lang_now%\io_show_changelang_5.txt
-@echo off
 echo Load language files done.
 echo ---------->>running.log
 echo [%date% %time%]%lang_launcher_log_programstarted%>>running.log
 echo [%date% %time%]%lang_launcher_log_lang%>>running.log
 echo Please wait...
-ping -n 1 127.0.0.1>nul
+ping -n 3 127.0.0.1>nul
 cls
 admin launch
 exit

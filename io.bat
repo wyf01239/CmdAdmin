@@ -9,6 +9,9 @@ if %1==null goto wback
 if %1==wsetuppluginalldone goto wsetuppalldone
 if %1==cd goto nocd
 if %1==cd.. goto nocd
+if %1==con goto nonul
+if %1==nul goto nonul
+if %1==aux goto nonul
 if %1==wdellog goto dlog
 if %1==wver goto wver
 if %1==whelp goto whelp
@@ -37,6 +40,9 @@ exit
 :nocd
 cd
 goto wback
+:nonul
+echo nul
+goto wback
 :wver
 echo %lang_io_show_wver_1%%wver%
 echo %lang_io_show_wver_2%
@@ -48,22 +54,40 @@ goto wback
 :whelp
 echo %lang_io_show_whelp_1%
 echo %lang_io_show_whelp_2%
-echo exit	%lang_io_show_whelp_exit%
-echo wdellog	%lang_io_show_whelp_wdellog%
-echo wver	%lang_io_show_whelp_wver%
-echo whelp	%lang_io_show_whelp_whelp%
-echo whelpmore	%lang_io_show_whelp_whelpmore%
-echo whmlist	%lang_io_show_whelp_whmlist%
-echo wplugins	%lang_io_show_whelp_wplugins%
-echo *wsetupplugin	%lang_io_show_whelp_wsetupplugin%
+rem 命令名称和语言文件中间相隔8空格.
+echo exit        %lang_io_show_whelp_exit%
+echo wdellog        %lang_io_show_whelp_wdellog%
+echo wver        %lang_io_show_whelp_wver%
+echo whelp        %lang_io_show_whelp_whelp%
+echo whelpmore        %lang_io_show_whelp_whelpmore%
+echo whmlist        %lang_io_show_whelp_whmlist%
+echo wplugins        %lang_io_show_whelp_wplugins%
+echo *wsetupplugin        %lang_io_show_whelp_wsetupplugin%
 echo.
 echo [%date% %time%]%lang_io_log_whelp%>>running.log
 goto wback
 :whelpm
-if exist helps\%2 echo -----START-----&&type helps\%2.txt&&goto whelpmok
-if exist helps\%2.txt echo -----START-----&&type helps\%2.txt&&goto whelpmok
-echo %lang_io_show_whelpmore_err_1%"%2"%lang_io_show_whelpmore_err_2%
-goto wback
+if "%2"=="" goto wback
+if "%2"==" " goto wback
+if exist helps\%2.txt (
+	echo helps\%2.txt
+	echo -----START-----
+	type helps\%2.txt
+	goto whelpmok
+	) else if exist helps\%2.bat.txt (
+				echo helps\%2.bat.txt
+				echo -----START-----
+				type helps\%2.bat.txt
+				goto whelpmok
+				) else if exist helps\%2 (
+								echo helps\%2
+								echo -----START-----
+								type helps\%2
+								goto whelpmok
+								) else (
+									echo %lang_io_show_whelpmore_err_1%"%2"%lang_io_show_whelpmore_err_2%
+									goto wback
+									)
 :whelpmok
 echo.
 echo ------END------
@@ -122,5 +146,5 @@ goto wback
 echo %2>data\lang_now.txt
 echo %lang_io_show_changelang_4%%2
 echo %lang_io_show_changelang_5%
-echo [%date% %time%]%lang_io_log_changelang%"%2".
+echo [%date% %time%]%lang_io_log_changelang%"%2".>>running.log
 goto wback
