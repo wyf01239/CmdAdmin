@@ -1,6 +1,7 @@
 @echo off
 title Wyfadmin
 set wver=Beta 0.4
+set /p lang_now=<data\lang_now.txt
 if "%1"=="" launcher
 if "%1"==" " launcher
 if %1==launch goto go
@@ -8,7 +9,7 @@ if %1==wback goto goto
 if %1==ioopen goto ioopen
 :go
 echo [%date% %time%]%lang_admin_log_ver%%wver%>>running.log
-echo %lang_admin_show_ver%%wver%.
+echo %lang_admin_show_ver%%wver%
 echo %lang_admin_show_by%
 echo %lang_admin_show_time%%date% %time%
 if %lang_file_err%==1 echo WARNING: Language config lost. Change language to "en-us".

@@ -1,0 +1,7 @@
+Command: wsetupplugin v1.0
+by wyf9. 2022.12.26
+
+wsetupplugin {-all / -onlyexe} {file}
+-all: Install the full plugin (contains help information, the plugin name /install will be executed after the copy is completed)
+-onlyexe: Only install the main program, no help information is generated
+file: Plugins to install (just drag in)

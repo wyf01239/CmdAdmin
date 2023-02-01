@@ -1,0 +1,8 @@
+测试插件: wtest v1.0
+by wyf9. 2022.12.27
+
+wtest {1/2/3/4}
+1: 显示 "test"
+2: 显示 "test plugin"
+3: 显示 "a test plugin"
+4: 显示 "this is a test plugin"
