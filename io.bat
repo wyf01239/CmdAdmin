@@ -69,23 +69,23 @@ goto wback
 :whelpm
 if "%2"=="" goto wback
 if "%2"==" " goto wback
-if exist helps\%2.txt (
-	echo helps\%2.txt
+if exist helps\%lang_now%\%2.txt (
+	echo helps\%lang_now%\%2.txt
 	echo -----START-----
-	type helps\%2.txt
+	type helps\%lang_now%\%2.txt
 	goto whelpmok
-	) else if exist helps\%2.bat.txt (
-				echo helps\%2.bat.txt
+	) else if exist helps\%lang_now%\%2.bat.txt (
+				echo helps\%lang_now%\%2.bat.txt
 				echo -----START-----
-				type helps\%2.bat.txt
+				type helps\%lang_now%\%2.bat.txt
 				goto whelpmok
-				) else if exist helps\%2 (
-								echo helps\%2
+				) else if exist helps\%lang_now%\%2 (
+								echo helps\%lang_now%\%2
 								echo -----START-----
-								type helps\%2
+								type helps\%lang_now%\%2
 								goto whelpmok
 								) else (
-									echo %lang_io_show_whelpmore_err_1%"%2"%lang_io_show_whelpmore_err_2%
+									echo %lang_io_show_whelpmore_err_1%"%2"%lang_io_show_whelpmore_err_2%.
 									goto wback
 									)
 :whelpmok
@@ -95,7 +95,7 @@ goto wback
 :whmlist
 echo.
 echo %lang_io_show_whmlist_1%
-dir /a:-d-h-s /b helps\
+dir /a:-d-h-s /b helps\%lang_now%\
 echo.
 echo %lang_io_show_whmlist_2%
 goto wback

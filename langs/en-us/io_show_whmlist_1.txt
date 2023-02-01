@@ -1,1 +1,1 @@
-Commands/plugins that can display help:
+Commands/plugins that can display more help:
