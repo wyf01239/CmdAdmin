@@ -5,6 +5,7 @@ set wvdate=2023.1.7
 if "%1"==" " admin ioopen
 if "%1"=="" admin ioopen
 if %1==exit goto exit
+if %1==wexit goto wexit
 if %1==null goto wback
 if %1==wsetuppluginalldone goto wsetuppalldone
 if %1==cd goto nocd
@@ -19,7 +20,8 @@ if %1==whelpmore goto whelpm
 if %1==wplugins goto wsplugin
 if %1==whmlist goto whmlist
 if %1==wsetupplugin goto wsetupp
-if %1==changelang goto clang
+if %1==wchanglang goto clang
+if %1==wreload goto reload
 echo [%date% %time%]%lang_io_log_runother%>>running.log
 if exist plugins\%1 goto wopenplugin
 if exist plugins\%1.bat goto wopenplugin
@@ -35,6 +37,10 @@ goto wback
 del running.log
 exit
 :exit
+echo [%date% %time%]%lang_io_log_exit%>>running.log
+exit
+:wexit
+cmd
 echo [%date% %time%]%lang_io_log_exit%>>running.log
 exit
 :nocd
@@ -56,12 +62,15 @@ echo %lang_io_show_whelp_1%
 echo %lang_io_show_whelp_2%
 rem 命令名称和语言文件中间相隔8空格.
 echo exit        %lang_io_show_whelp_exit%
+echo wexit        %lang_io_show_whelp_wexit%
+echo wreload        %lang_io_show_whelp_wreload%
 echo wdellog        %lang_io_show_whelp_wdellog%
 echo wver        %lang_io_show_whelp_wver%
 echo whelp        %lang_io_show_whelp_whelp%
 echo whelpmore        %lang_io_show_whelp_whelpmore%
 echo whmlist        %lang_io_show_whelp_whmlist%
 echo wplugins        %lang_io_show_whelp_wplugins%
+echo wchangelang        %lang_io_show_whelp_wchangelang%
 echo *wsetupplugin        %lang_io_show_whelp_wsetupplugin%
 echo.
 echo [%date% %time%]%lang_io_log_whelp%>>running.log
@@ -134,17 +143,22 @@ goto wback
 if "%2"=="" goto clang2
 if "%2"==" " goto clang2
 if exist langs\%2 goto clanggo
-io whelpmore changelang
+io whelpmore wchangelang
 exit
 :clang2
-echo %lang_io_show_changelang_1%%lang_now%
-echo %lang_io_show_changelang_2%
+echo %lang_io_show_wchangelang_1%%lang_now%
+echo %lang_io_show_wchangelang_2%
 dir /a:d /b langs\
-echo %lang_io_show_changelang_3%
+echo %lang_io_show_wchangelang_3%
 goto wback
 :clanggo
 echo %2>data\lang_now.txt
-echo %lang_io_show_changelang_4%%2
-echo %lang_io_show_changelang_5%
+echo %lang_io_show_wchangelang_4%%2
+echo %lang_io_show_wchangelang_5%
+echo %lang_io_show_wchangelang_6%
 echo [%date% %time%]%lang_io_log_changelang%"%2".>>running.log
 goto wback
+:reload
+echo %lang_io_show_reload%
+launcher
+exit

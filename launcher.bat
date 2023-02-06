@@ -61,18 +61,23 @@ set /p lang_io_show_wver_2=<langs\%lang_now%\io_show_wver_2.txt
 set /p lang_io_show_wver_3=<langs\%lang_now%\io_show_wver_3.txt
 set /p lang_io_show_wver_4=<langs\%lang_now%\io_show_wver_4.txt
 set /p lang_io_show_wver_5=<langs\%lang_now%\io_show_wver_5.txt
-set /p lang_io_log_changelang=<langs\%lang_now%\io_log_changelang.txt
-set /p lang_io_show_changelang_1=<langs\%lang_now%\io_show_changelang_1.txt
-set /p lang_io_show_changelang_2=<langs\%lang_now%\io_show_changelang_2.txt
-set /p lang_io_show_changelang_3=<langs\%lang_now%\io_show_changelang_3.txt
-set /p lang_io_show_changelang_4=<langs\%lang_now%\io_show_changelang_4.txt
-set /p lang_io_show_changelang_5=<langs\%lang_now%\io_show_changelang_5.txt
+set /p lang_io_log_wchangelang=<langs\%lang_now%\io_log_wchangelang.txt
+set /p lang_io_show_wchangelang_1=<langs\%lang_now%\io_show_wchangelang_1.txt
+set /p lang_io_show_wchangelang_2=<langs\%lang_now%\io_show_wchangelang_2.txt
+set /p lang_io_show_wchangelang_3=<langs\%lang_now%\io_show_wchangelang_3.txt
+set /p lang_io_show_wchangelang_4=<langs\%lang_now%\io_show_wchangelang_4.txt
+set /p lang_io_show_wchangelang_5=<langs\%lang_now%\io_show_wchangelang_5.txt
+set /p lang_io_show_wchangelang_6=<langs\%lang_now%\io_show_wchangelang_6.txt
+set /p lang_io_show_whelp_wchangelang=<langs\%lang_now%\io_show_whelp_wchangelang.txt
+set /p lang_io_show_whelp_wexit=<langs\%lang_now%\io_show_whelp_wexit.txt
+set /p lang_io_show_whelp_wreload=<langs\%lang_now%\io_show_whelp_wreload.txt
+set /p lang_io_show_wreload=<langs\%lang_now%\io_show_wreload.txt
 echo Load language files done.
 echo ---------->>running.log
 echo [%date% %time%]%lang_launcher_log_programstarted%>>running.log
 echo [%date% %time%]%lang_launcher_log_lang%>>running.log
-echo Please wait...
 ping -n 2 127.0.0.1>nul
 cls
 admin launch
 exit
+rem set /p lang_=<langs\%lang_now%\.txt
