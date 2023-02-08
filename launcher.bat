@@ -72,6 +72,7 @@ set /p lang_io_show_whelp_wchangelang=<langs\%lang_now%\io_show_whelp_wchangelan
 set /p lang_io_show_whelp_wexit=<langs\%lang_now%\io_show_whelp_wexit.txt
 set /p lang_io_show_whelp_wreload=<langs\%lang_now%\io_show_whelp_wreload.txt
 set /p lang_io_show_wreload=<langs\%lang_now%\io_show_wreload.txt
+set /p lang_io_show_wchangelang_0=<langs\%lang_now%\io_show_wchangelang_0.txt
 echo Load language files done.
 echo ---------->>running.log
 echo [%date% %time%]%lang_launcher_log_programstarted%>>running.log

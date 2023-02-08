@@ -20,7 +20,7 @@ if %1==whelpmore goto whelpm
 if %1==wplugins goto wsplugin
 if %1==whmlist goto whmlist
 if %1==wsetupplugin goto wsetupp
-if %1==wchanglang goto clang
+if %1==wchangelang goto clang
 if %1==wreload goto reload
 echo [%date% %time%]%lang_io_log_runother%>>running.log
 if exist plugins\%1 goto wopenplugin
@@ -40,8 +40,8 @@ exit
 echo [%date% %time%]%lang_io_log_exit%>>running.log
 exit
 :wexit
-cmd
 echo [%date% %time%]%lang_io_log_exit%>>running.log
+cmd
 exit
 :nocd
 cd
@@ -143,7 +143,7 @@ goto wback
 if "%2"=="" goto clang2
 if "%2"==" " goto clang2
 if exist langs\%2 goto clanggo
-io whelpmore wchangelang
+echo %lang_io_show_wchangelang_0%
 exit
 :clang2
 echo %lang_io_show_wchangelang_1%%lang_now%
@@ -156,7 +156,7 @@ echo %2>data\lang_now.txt
 echo %lang_io_show_wchangelang_4%%2
 echo %lang_io_show_wchangelang_5%
 echo %lang_io_show_wchangelang_6%
-echo [%date% %time%]%lang_io_log_changelang%"%2".>>running.log
+echo [%date% %time%]%lang_io_log_wchangelang%"%2".>>running.log
 goto wback
 :reload
 echo %lang_io_show_reload%
