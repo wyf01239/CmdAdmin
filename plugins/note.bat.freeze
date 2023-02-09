@@ -1,0 +1,112 @@
+@echo off
+title note
+if "%1"=="" goto startup
+if "%1"==" " goto startup
+if "%1"=="-calc" goto calc
+if %1==/install goto install
+rem ----------
+goto startup
+:install
+echo Disabled
+goto startup
+:startup
+set wpcom=0
+if not exist data\note md data\note\
+if not exist data\note\temp md data\note\temp
+echo Input "0" to quit
+echo Input File Name to Start Write (No Suffix)
+set wpfilename=null
+set /p wpfilename=^>^>^>
+if "%wpfilename%"=="" admin wback
+if "%wpfilename%"==" " admin wback
+if "%wpfilename%"=="0" admin wback
+if "%wpfilename%"=="null" admin wback
+set wplinecount=1
+echo ================>>data\note\%wpfilename%.txt
+echo Start Time: %Date% / %Time%>>data\note\%wpfilename%.txt
+echo Author: %UserDomain% / %UserName%>>data\note\%wpfilename%.txt
+echo ---------------->>data\note\%wpfilename%.txt
+:goto
+if not exist data\note\%wpfilename%.txt (
+	echo File Data\Note\%wpfilename%.txt Not Found!
+	admin wback
+	)
+cls
+echo Input /q to quit.
+type data\note\%wpfilename%.txt
+if "%wpcom%"=="1" (
+	echo.
+	set wpcom=0
+)
+set wpinput=null
+set /p wpinput=%wplinecount%^| 
+if "%wpinput%"=="/q" goto end
+if "%wpinput%"=="/c" goto calc
+if "%wpinput%"=="///" goto command
+if "%wpinput%"=="null" (
+	echo %wplinecount%^| 　>>data\note\%wpfilename%.txt
+	goto goto2
+)
+if "%wpinput%"=="0" (
+	echo %wplinecount%^| 0　>>data\note\%wpfilename%.txt
+	goto goto2
+)
+if "%wpinput%"=="1" (
+	echo %wplinecount%^| 1　>>data\note\%wpfilename%.txt
+	goto goto2
+)
+if "%wpinput%"=="2" (
+	echo %wplinecount%^| 2　>>data\note\%wpfilename%.txt
+	goto goto2
+)
+if "%wpinput%"=="3" (
+	echo %wplinecount%^| 3　>>data\note\%wpfilename%.txt
+	goto goto2
+)
+if "%wpinput%"=="4" (
+	echo %wplinecount%^| 4　>>data\note\%wpfilename%.txt
+	goto goto2
+)
+if "%wpinput%"=="5" (
+	echo %wplinecount%^| 5　>>data\note\%wpfilename%.txt
+	goto goto2
+)
+if "%wpinput%"=="6" (
+	echo %wplinecount%^| 6　>>data\note\%wpfilename%.txt
+	goto goto2
+)
+if "%wpinput%"=="7" (
+	echo %wplinecount%^| 7　>>data\note\%wpfilename%.txt
+	goto goto2
+)
+if "%wpinput%"=="8" (
+	echo %wplinecount%^| 8　>>data\note\%wpfilename%.txt
+	goto goto2
+)
+if "%wpinput%"=="9" (
+	echo %wplinecount%^| 9　>>data\note\%wpfilename%.txt
+	goto goto2
+)
+echo %wplinecount%^| %wpinput%>>data\note\%wpfilename%.txt
+:goto2
+set /a wplinecount=%wplinecount%+1
+goto goto
+:end
+echo ---------------->>data\note\%wpfilename%.txt
+echo End Time: %Date% / %Time%>>data\note\%wpfilename%.txt
+echo ================>>data\note\%wpfilename%.txt
+echo.>>data\note\%wpfilename%.txt
+echo Saved File: %cd%\data\note\%wpfilename%.txt
+echo Quited.
+admin wback
+:calc
+set /p wpinput=calc^| 
+set /a wpcalc=%wpinput%
+echo %wplinecount%^| "%wpinput%" ^= %wpcalc%　>>data\note\%wpfilename%.txt
+goto goto2
+:command
+set /p wpinput=run^| 
+echo %wplinecount%^| /// %wpinput%>>data\note\%wpfilename%.txt
+%wpinput%>>data\note\%wpfilename%.txt
+set wpcom=1
+goto goto2

@@ -47,7 +47,6 @@ exit
 cd
 goto wback
 :nonul
-echo nul
 goto wback
 :wver
 echo %lang_io_show_wver_1%%wver%

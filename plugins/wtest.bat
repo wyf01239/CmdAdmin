@@ -12,6 +12,7 @@ if %1==4 echo this is a test plugin
 rem ----------
 admin wback
 :install
+echo WARNING: 
 if exist helps\wtest.txt del helps\wtest.txt>nul
 echo ²âÊÔ²å¼þ:wtest v1.0>>helps\wtest.txt
 echo by wyf9.2022.12.27>>helps\wtest.txt
