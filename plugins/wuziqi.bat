@@ -213,95 +213,95 @@ if "%choose%"=="null" goto gamingwhite
 if "%choose%"=="q" echo false>data\wuziqi_gaming.txt&&goto started
 if "%choose%"=="z" goto gamingblack
 
-if "%choose%"=="a1" set a1=°×&&goto gamingwhiteio2
-if "%choose%"=="a2" set a2=°×&&goto gamingwhiteio2
-if "%choose%"=="a3" set a3=°×&&goto gamingwhiteio2
-if "%choose%"=="a4" set a4=°×&&goto gamingwhiteio2
-if "%choose%"=="a5" set a5=°×&&goto gamingwhiteio2
-if "%choose%"=="a6" set a6=°×&&goto gamingwhiteio2
-if "%choose%"=="a7" set a7=°×&&goto gamingwhiteio2
-if "%choose%"=="a8" set a8=°×&&goto gamingwhiteio2
-if "%choose%"=="a9" set a9=°×&&goto gamingwhiteio2
+if "%choose%"=="a1" (if %a1%==ÎÞ (set a1=°×&&goto gamingwhiteio2))
+if "%choose%"=="a2" (if %a2%==ÎÞ (set a2=°×&&goto gamingwhiteio2))
+if "%choose%"=="a3" (if %a3%==ÎÞ (set a3=°×&&goto gamingwhiteio2))
+if "%choose%"=="a4" (if %a4%==ÎÞ (set a4=°×&&goto gamingwhiteio2))
+if "%choose%"=="a5" (if %a5%==ÎÞ (set a5=°×&&goto gamingwhiteio2))
+if "%choose%"=="a6" (if %a6%==ÎÞ (set a6=°×&&goto gamingwhiteio2))
+if "%choose%"=="a7" (if %a7%==ÎÞ (set a7=°×&&goto gamingwhiteio2))
+if "%choose%"=="a8" (if %a8%==ÎÞ (set a8=°×&&goto gamingwhiteio2))
+if "%choose%"=="a9" (if %a9%==ÎÞ (set a9=°×&&goto gamingwhiteio2))
 
-if "%choose%"=="b1" set b1=°×&&goto gamingwhiteio2
-if "%choose%"=="b2" set b2=°×&&goto gamingwhiteio2
-if "%choose%"=="b3" set b3=°×&&goto gamingwhiteio2
-if "%choose%"=="b4" set b4=°×&&goto gamingwhiteio2
-if "%choose%"=="b5" set b5=°×&&goto gamingwhiteio2
-if "%choose%"=="b6" set b6=°×&&goto gamingwhiteio2
-if "%choose%"=="b7" set b7=°×&&goto gamingwhiteio2
-if "%choose%"=="b8" set b8=°×&&goto gamingwhiteio2
-if "%choose%"=="b9" set b9=°×&&goto gamingwhiteio2
+if "%choose%"=="b1" (if %b1%==ÎÞ (set b1=°×&&goto gamingwhiteio2))
+if "%choose%"=="b2" (if %b2%==ÎÞ (set b2=°×&&goto gamingwhiteio2))
+if "%choose%"=="b3" (if %b3%==ÎÞ (set b3=°×&&goto gamingwhiteio2))
+if "%choose%"=="b4" (if %b4%==ÎÞ (set b4=°×&&goto gamingwhiteio2))
+if "%choose%"=="b5" (if %b5%==ÎÞ (set b5=°×&&goto gamingwhiteio2))
+if "%choose%"=="b6" (if %b6%==ÎÞ (set b6=°×&&goto gamingwhiteio2))
+if "%choose%"=="b7" (if %b7%==ÎÞ (set b7=°×&&goto gamingwhiteio2))
+if "%choose%"=="b8" (if %b8%==ÎÞ (set b8=°×&&goto gamingwhiteio2))
+if "%choose%"=="b9" (if %b9%==ÎÞ (set b9=°×&&goto gamingwhiteio2))
 
-if "%choose%"=="c1" set c1=°×&&goto gamingwhiteio2
-if "%choose%"=="c2" set c2=°×&&goto gamingwhiteio2
-if "%choose%"=="c3" set c3=°×&&goto gamingwhiteio2
-if "%choose%"=="c4" set c4=°×&&goto gamingwhiteio2
-if "%choose%"=="c5" set c5=°×&&goto gamingwhiteio2
-if "%choose%"=="c6" set c6=°×&&goto gamingwhiteio2
-if "%choose%"=="c7" set c7=°×&&goto gamingwhiteio2
-if "%choose%"=="c8" set c8=°×&&goto gamingwhiteio2
-if "%choose%"=="c9" set c9=°×&&goto gamingwhiteio2
+if "%choose%"=="c1" (if %c1%==ÎÞ (set c1=°×&&goto gamingwhiteio2))
+if "%choose%"=="c2" (if %c2%==ÎÞ (set c2=°×&&goto gamingwhiteio2))
+if "%choose%"=="c3" (if %c3%==ÎÞ (set c3=°×&&goto gamingwhiteio2))
+if "%choose%"=="c4" (if %c4%==ÎÞ (set c4=°×&&goto gamingwhiteio2))
+if "%choose%"=="c5" (if %c5%==ÎÞ (set c5=°×&&goto gamingwhiteio2))
+if "%choose%"=="c6" (if %c6%==ÎÞ (set c6=°×&&goto gamingwhiteio2))
+if "%choose%"=="c7" (if %c7%==ÎÞ (set c7=°×&&goto gamingwhiteio2))
+if "%choose%"=="c8" (if %c8%==ÎÞ (set c8=°×&&goto gamingwhiteio2))
+if "%choose%"=="c9" (if %c9%==ÎÞ (set c9=°×&&goto gamingwhiteio2))
 
-if "%choose%"=="d1" set d1=°×&&goto gamingwhiteio2
-if "%choose%"=="d2" set d2=°×&&goto gamingwhiteio2
-if "%choose%"=="d3" set d3=°×&&goto gamingwhiteio2
-if "%choose%"=="d4" set d4=°×&&goto gamingwhiteio2
-if "%choose%"=="d5" set d5=°×&&goto gamingwhiteio2
-if "%choose%"=="d6" set d6=°×&&goto gamingwhiteio2
-if "%choose%"=="d7" set d7=°×&&goto gamingwhiteio2
-if "%choose%"=="d8" set d8=°×&&goto gamingwhiteio2
-if "%choose%"=="d9" set d9=°×&&goto gamingwhiteio2
+if "%choose%"=="d1" (if %d1%==ÎÞ (set d1=°×&&goto gamingwhiteio2))
+if "%choose%"=="d2" (if %d2%==ÎÞ (set d2=°×&&goto gamingwhiteio2))
+if "%choose%"=="d3" (if %d3%==ÎÞ (set d3=°×&&goto gamingwhiteio2))
+if "%choose%"=="d4" (if %d4%==ÎÞ (set d4=°×&&goto gamingwhiteio2))
+if "%choose%"=="d5" (if %d5%==ÎÞ (set d5=°×&&goto gamingwhiteio2))
+if "%choose%"=="d6" (if %d6%==ÎÞ (set d6=°×&&goto gamingwhiteio2))
+if "%choose%"=="d7" (if %d7%==ÎÞ (set d7=°×&&goto gamingwhiteio2))
+if "%choose%"=="d8" (if %d8%==ÎÞ (set d8=°×&&goto gamingwhiteio2))
+if "%choose%"=="d9" (if %d9%==ÎÞ (set d9=°×&&goto gamingwhiteio2))
 
-if "%choose%"=="e1" set e1=°×&&goto gamingwhiteio2
-if "%choose%"=="e2" set e2=°×&&goto gamingwhiteio2
-if "%choose%"=="e3" set e3=°×&&goto gamingwhiteio2
-if "%choose%"=="e4" set e4=°×&&goto gamingwhiteio2
-if "%choose%"=="e5" set e5=°×&&goto gamingwhiteio2
-if "%choose%"=="e6" set e6=°×&&goto gamingwhiteio2
-if "%choose%"=="e7" set e7=°×&&goto gamingwhiteio2
-if "%choose%"=="e8" set e8=°×&&goto gamingwhiteio2
-if "%choose%"=="e9" set e9=°×&&goto gamingwhiteio2
+if "%choose%"=="e1" (if %e1%==ÎÞ (set e1=°×&&goto gamingwhiteio2))
+if "%choose%"=="e2" (if %e2%==ÎÞ (set e2=°×&&goto gamingwhiteio2))
+if "%choose%"=="e3" (if %e3%==ÎÞ (set e3=°×&&goto gamingwhiteio2))
+if "%choose%"=="e4" (if %e4%==ÎÞ (set e4=°×&&goto gamingwhiteio2))
+if "%choose%"=="e5" (if %e5%==ÎÞ (set e5=°×&&goto gamingwhiteio2))
+if "%choose%"=="e6" (if %e6%==ÎÞ (set e6=°×&&goto gamingwhiteio2))
+if "%choose%"=="e7" (if %e7%==ÎÞ (set e7=°×&&goto gamingwhiteio2))
+if "%choose%"=="e8" (if %e8%==ÎÞ (set e8=°×&&goto gamingwhiteio2))
+if "%choose%"=="e9" (if %e9%==ÎÞ (set e9=°×&&goto gamingwhiteio2))
 
-if "%choose%"=="f1" set f1=°×&&goto gamingwhiteio2
-if "%choose%"=="f2" set f2=°×&&goto gamingwhiteio2
-if "%choose%"=="f3" set f3=°×&&goto gamingwhiteio2
-if "%choose%"=="f4" set f4=°×&&goto gamingwhiteio2
-if "%choose%"=="f5" set f5=°×&&goto gamingwhiteio2
-if "%choose%"=="f6" set f6=°×&&goto gamingwhiteio2
-if "%choose%"=="f7" set f7=°×&&goto gamingwhiteio2
-if "%choose%"=="f8" set f8=°×&&goto gamingwhiteio2
-if "%choose%"=="f9" set f9=°×&&goto gamingwhiteio2
+if "%choose%"=="f1" (if %f1%==ÎÞ (set f1=°×&&goto gamingwhiteio2))
+if "%choose%"=="f2" (if %f2%==ÎÞ (set f2=°×&&goto gamingwhiteio2))
+if "%choose%"=="f3" (if %f3%==ÎÞ (set f3=°×&&goto gamingwhiteio2))
+if "%choose%"=="f4" (if %f4%==ÎÞ (set f4=°×&&goto gamingwhiteio2))
+if "%choose%"=="f5" (if %f5%==ÎÞ (set f5=°×&&goto gamingwhiteio2))
+if "%choose%"=="f6" (if %f6%==ÎÞ (set f6=°×&&goto gamingwhiteio2))
+if "%choose%"=="f7" (if %f7%==ÎÞ (set f7=°×&&goto gamingwhiteio2))
+if "%choose%"=="f8" (if %f8%==ÎÞ (set f8=°×&&goto gamingwhiteio2))
+if "%choose%"=="f9" (if %f9%==ÎÞ (set f9=°×&&goto gamingwhiteio2))
 
-if "%choose%"=="g1" set g1=°×&&goto gamingwhiteio2
-if "%choose%"=="g2" set g2=°×&&goto gamingwhiteio2
-if "%choose%"=="g3" set g3=°×&&goto gamingwhiteio2
-if "%choose%"=="g4" set g4=°×&&goto gamingwhiteio2
-if "%choose%"=="g5" set g5=°×&&goto gamingwhiteio2
-if "%choose%"=="g6" set g6=°×&&goto gamingwhiteio2
-if "%choose%"=="g7" set g7=°×&&goto gamingwhiteio2
-if "%choose%"=="g8" set g8=°×&&goto gamingwhiteio2
-if "%choose%"=="g9" set g9=°×&&goto gamingwhiteio2
+if "%choose%"=="g1" (if %g1%==ÎÞ (set g1=°×&&goto gamingwhiteio2))
+if "%choose%"=="g2" (if %g2%==ÎÞ (set g2=°×&&goto gamingwhiteio2))
+if "%choose%"=="g3" (if %g3%==ÎÞ (set g3=°×&&goto gamingwhiteio2))
+if "%choose%"=="g4" (if %g4%==ÎÞ (set g4=°×&&goto gamingwhiteio2))
+if "%choose%"=="g5" (if %g5%==ÎÞ (set g5=°×&&goto gamingwhiteio2))
+if "%choose%"=="g6" (if %g6%==ÎÞ (set g6=°×&&goto gamingwhiteio2))
+if "%choose%"=="g7" (if %g7%==ÎÞ (set g7=°×&&goto gamingwhiteio2))
+if "%choose%"=="g8" (if %g8%==ÎÞ (set g8=°×&&goto gamingwhiteio2))
+if "%choose%"=="g9" (if %g9%==ÎÞ (set g9=°×&&goto gamingwhiteio2))
 
-if "%choose%"=="h1" set h1=°×&&goto gamingwhiteio2
-if "%choose%"=="h2" set h2=°×&&goto gamingwhiteio2
-if "%choose%"=="h3" set h3=°×&&goto gamingwhiteio2
-if "%choose%"=="h4" set h4=°×&&goto gamingwhiteio2
-if "%choose%"=="h5" set h5=°×&&goto gamingwhiteio2
-if "%choose%"=="h6" set h6=°×&&goto gamingwhiteio2
-if "%choose%"=="h7" set h7=°×&&goto gamingwhiteio2
-if "%choose%"=="h8" set h8=°×&&goto gamingwhiteio2
-if "%choose%"=="h9" set h9=°×&&goto gamingwhiteio2
+if "%choose%"=="h1" (if %h1%==ÎÞ (set g1=°×&&goto gamingwhiteio2))
+if "%choose%"=="h2" (if %h2%==ÎÞ (set g2=°×&&goto gamingwhiteio2))
+if "%choose%"=="h3" (if %h3%==ÎÞ (set g3=°×&&goto gamingwhiteio2))
+if "%choose%"=="h4" (if %h4%==ÎÞ (set g4=°×&&goto gamingwhiteio2))
+if "%choose%"=="h5" (if %h5%==ÎÞ (set g5=°×&&goto gamingwhiteio2))
+if "%choose%"=="h6" (if %h6%==ÎÞ (set g6=°×&&goto gamingwhiteio2))
+if "%choose%"=="h7" (if %h7%==ÎÞ (set g7=°×&&goto gamingwhiteio2))
+if "%choose%"=="h8" (if %h8%==ÎÞ (set g8=°×&&goto gamingwhiteio2))
+if "%choose%"=="h9" (if %h9%==ÎÞ (set g9=°×&&goto gamingwhiteio2))
 
-if "%choose%"=="i1" set i1=°×&&goto gamingwhiteio2
-if "%choose%"=="i2" set i2=°×&&goto gamingwhiteio2
-if "%choose%"=="i3" set i3=°×&&goto gamingwhiteio2
-if "%choose%"=="i4" set i4=°×&&goto gamingwhiteio2
-if "%choose%"=="i5" set i5=°×&&goto gamingwhiteio2
-if "%choose%"=="i6" set i6=°×&&goto gamingwhiteio2
-if "%choose%"=="i7" set i7=°×&&goto gamingwhiteio2
-if "%choose%"=="i8" set i8=°×&&goto gamingwhiteio2
-if "%choose%"=="i9" set i9=°×&&goto gamingwhiteio2
+if "%choose%"=="i1" (if %i1%==ÎÞ (set i1=°×&&goto gamingwhiteio2))
+if "%choose%"=="i2" (if %i2%==ÎÞ (set i2=°×&&goto gamingwhiteio2))
+if "%choose%"=="i3" (if %i3%==ÎÞ (set i3=°×&&goto gamingwhiteio2))
+if "%choose%"=="i4" (if %i4%==ÎÞ (set i4=°×&&goto gamingwhiteio2))
+if "%choose%"=="i5" (if %i5%==ÎÞ (set i5=°×&&goto gamingwhiteio2))
+if "%choose%"=="i6" (if %i6%==ÎÞ (set i6=°×&&goto gamingwhiteio2))
+if "%choose%"=="i7" (if %i7%==ÎÞ (set i7=°×&&goto gamingwhiteio2))
+if "%choose%"=="i8" (if %i8%==ÎÞ (set i8=°×&&goto gamingwhiteio2))
+if "%choose%"=="i9" (if %i9%==ÎÞ (set i9=°×&&goto gamingwhiteio2))
 goto gamingwhite
 :gamingwhiteio2
 set /a alltick=%alltick%+1
@@ -341,95 +341,95 @@ if "%choose%"=="null" goto gamingblack
 if "%choose%"=="q" echo false>data\wuziqi_gaming.txt&&goto started
 if "%choose%"=="z" goto gamingblack
 
-if "%choose%"=="a1" set a1=ºÚ&&goto gamingblackio2
-if "%choose%"=="a2" set a2=ºÚ&&goto gamingblackio2
-if "%choose%"=="a3" set a3=ºÚ&&goto gamingblackio2
-if "%choose%"=="a4" set a4=ºÚ&&goto gamingblackio2
-if "%choose%"=="a5" set a5=ºÚ&&goto gamingblackio2
-if "%choose%"=="a6" set a6=ºÚ&&goto gamingblackio2
-if "%choose%"=="a7" set a7=ºÚ&&goto gamingblackio2
-if "%choose%"=="a8" set a8=ºÚ&&goto gamingblackio2
-if "%choose%"=="a9" set a9=ºÚ&&goto gamingblackio2
+if "%choose%"=="a1" (if %a1%==ÎÞ (set a1=ºÚ&&goto gamingblackio2))
+if "%choose%"=="a2" (if %a2%==ÎÞ (set a2=ºÚ&&goto gamingblackio2))
+if "%choose%"=="a3" (if %a3%==ÎÞ (set a3=ºÚ&&goto gamingblackio2))
+if "%choose%"=="a4" (if %a4%==ÎÞ (set a4=ºÚ&&goto gamingblackio2))
+if "%choose%"=="a5" (if %a5%==ÎÞ (set a5=ºÚ&&goto gamingblackio2))
+if "%choose%"=="a6" (if %a6%==ÎÞ (set a6=ºÚ&&goto gamingblackio2))
+if "%choose%"=="a7" (if %a7%==ÎÞ (set a7=ºÚ&&goto gamingblackio2))
+if "%choose%"=="a8" (if %a8%==ÎÞ (set a8=ºÚ&&goto gamingblackio2))
+if "%choose%"=="a9" (if %a9%==ÎÞ (set a9=ºÚ&&goto gamingblackio2))
 
-if "%choose%"=="b1" set b1=ºÚ&&goto gamingblackio2
-if "%choose%"=="b2" set b2=ºÚ&&goto gamingblackio2
-if "%choose%"=="b3" set b3=ºÚ&&goto gamingblackio2
-if "%choose%"=="b4" set b4=ºÚ&&goto gamingblackio2
-if "%choose%"=="b5" set b5=ºÚ&&goto gamingblackio2
-if "%choose%"=="b6" set b6=ºÚ&&goto gamingblackio2
-if "%choose%"=="b7" set b7=ºÚ&&goto gamingblackio2
-if "%choose%"=="b8" set b8=ºÚ&&goto gamingblackio2
-if "%choose%"=="b9" set b9=ºÚ&&goto gamingblackio2
+if "%choose%"=="b1" (if %b1%==ÎÞ (set b1=ºÚ&&goto gamingblackio2))
+if "%choose%"=="b2" (if %b2%==ÎÞ (set b2=ºÚ&&goto gamingblackio2))
+if "%choose%"=="b3" (if %b3%==ÎÞ (set b3=ºÚ&&goto gamingblackio2))
+if "%choose%"=="b4" (if %b4%==ÎÞ (set b4=ºÚ&&goto gamingblackio2))
+if "%choose%"=="b5" (if %b5%==ÎÞ (set b5=ºÚ&&goto gamingblackio2))
+if "%choose%"=="b6" (if %b6%==ÎÞ (set b6=ºÚ&&goto gamingblackio2))
+if "%choose%"=="b7" (if %b7%==ÎÞ (set b7=ºÚ&&goto gamingblackio2))
+if "%choose%"=="b8" (if %b8%==ÎÞ (set b8=ºÚ&&goto gamingblackio2))
+if "%choose%"=="b9" (if %b9%==ÎÞ (set b9=ºÚ&&goto gamingblackio2))
 
-if "%choose%"=="c1" set c1=ºÚ&&goto gamingblackio2
-if "%choose%"=="c2" set c2=ºÚ&&goto gamingblackio2
-if "%choose%"=="c3" set c3=ºÚ&&goto gamingblackio2
-if "%choose%"=="c4" set c4=ºÚ&&goto gamingblackio2
-if "%choose%"=="c5" set c5=ºÚ&&goto gamingblackio2
-if "%choose%"=="c6" set c6=ºÚ&&goto gamingblackio2
-if "%choose%"=="c7" set c7=ºÚ&&goto gamingblackio2
-if "%choose%"=="c8" set c8=ºÚ&&goto gamingblackio2
-if "%choose%"=="c9" set c9=ºÚ&&goto gamingblackio2
+if "%choose%"=="c1" (if %c1%==ÎÞ (set c1=ºÚ&&goto gamingblackio2))
+if "%choose%"=="c2" (if %c2%==ÎÞ (set c2=ºÚ&&goto gamingblackio2))
+if "%choose%"=="c3" (if %c3%==ÎÞ (set c3=ºÚ&&goto gamingblackio2))
+if "%choose%"=="c4" (if %c4%==ÎÞ (set c4=ºÚ&&goto gamingblackio2))
+if "%choose%"=="c5" (if %c5%==ÎÞ (set c5=ºÚ&&goto gamingblackio2))
+if "%choose%"=="c6" (if %c6%==ÎÞ (set c6=ºÚ&&goto gamingblackio2))
+if "%choose%"=="c7" (if %c7%==ÎÞ (set c7=ºÚ&&goto gamingblackio2))
+if "%choose%"=="c8" (if %c8%==ÎÞ (set c8=ºÚ&&goto gamingblackio2))
+if "%choose%"=="c9" (if %c9%==ÎÞ (set c9=ºÚ&&goto gamingblackio2))
 
-if "%choose%"=="d1" set d1=ºÚ&&goto gamingblackio2
-if "%choose%"=="d2" set d2=ºÚ&&goto gamingblackio2
-if "%choose%"=="d3" set d3=ºÚ&&goto gamingblackio2
-if "%choose%"=="d4" set d4=ºÚ&&goto gamingblackio2
-if "%choose%"=="d5" set d5=ºÚ&&goto gamingblackio2
-if "%choose%"=="d6" set d6=ºÚ&&goto gamingblackio2
-if "%choose%"=="d7" set d7=ºÚ&&goto gamingblackio2
-if "%choose%"=="d8" set d8=ºÚ&&goto gamingblackio2
-if "%choose%"=="d9" set d9=ºÚ&&goto gamingblackio2
+if "%choose%"=="d1" (if %d1%==ÎÞ (set d1=ºÚ&&goto gamingblackio2))
+if "%choose%"=="d2" (if %d2%==ÎÞ (set d2=ºÚ&&goto gamingblackio2))
+if "%choose%"=="d3" (if %d3%==ÎÞ (set d3=ºÚ&&goto gamingblackio2))
+if "%choose%"=="d4" (if %d4%==ÎÞ (set d4=ºÚ&&goto gamingblackio2))
+if "%choose%"=="d5" (if %d5%==ÎÞ (set d5=ºÚ&&goto gamingblackio2))
+if "%choose%"=="d6" (if %d6%==ÎÞ (set d6=ºÚ&&goto gamingblackio2))
+if "%choose%"=="d7" (if %d7%==ÎÞ (set d7=ºÚ&&goto gamingblackio2))
+if "%choose%"=="d8" (if %d8%==ÎÞ (set d8=ºÚ&&goto gamingblackio2))
+if "%choose%"=="d9" (if %d9%==ÎÞ (set d9=ºÚ&&goto gamingblackio2))
 
-if "%choose%"=="e1" set e1=ºÚ&&goto gamingblackio2
-if "%choose%"=="e2" set e2=ºÚ&&goto gamingblackio2
-if "%choose%"=="e3" set e3=ºÚ&&goto gamingblackio2
-if "%choose%"=="e4" set e4=ºÚ&&goto gamingblackio2
-if "%choose%"=="e5" set e5=ºÚ&&goto gamingblackio2
-if "%choose%"=="e6" set e6=ºÚ&&goto gamingblackio2
-if "%choose%"=="e7" set e7=ºÚ&&goto gamingblackio2
-if "%choose%"=="e8" set e8=ºÚ&&goto gamingblackio2
-if "%choose%"=="e9" set e9=ºÚ&&goto gamingblackio2
+if "%choose%"=="e1" (if %e1%==ÎÞ (set e1=ºÚ&&goto gamingblackio2))
+if "%choose%"=="e2" (if %e2%==ÎÞ (set e2=ºÚ&&goto gamingblackio2))
+if "%choose%"=="e3" (if %e3%==ÎÞ (set e3=ºÚ&&goto gamingblackio2))
+if "%choose%"=="e4" (if %e4%==ÎÞ (set e4=ºÚ&&goto gamingblackio2))
+if "%choose%"=="e5" (if %e5%==ÎÞ (set e5=ºÚ&&goto gamingblackio2))
+if "%choose%"=="e6" (if %e6%==ÎÞ (set e6=ºÚ&&goto gamingblackio2))
+if "%choose%"=="e7" (if %e7%==ÎÞ (set e7=ºÚ&&goto gamingblackio2))
+if "%choose%"=="e8" (if %e8%==ÎÞ (set e8=ºÚ&&goto gamingblackio2))
+if "%choose%"=="e9" (if %e9%==ÎÞ (set e9=ºÚ&&goto gamingblackio2))
 
-if "%choose%"=="f1" set f1=ºÚ&&goto gamingblackio2
-if "%choose%"=="f2" set f2=ºÚ&&goto gamingblackio2
-if "%choose%"=="f3" set f3=ºÚ&&goto gamingblackio2
-if "%choose%"=="f4" set f4=ºÚ&&goto gamingblackio2
-if "%choose%"=="f5" set f5=ºÚ&&goto gamingblackio2
-if "%choose%"=="f6" set f6=ºÚ&&goto gamingblackio2
-if "%choose%"=="f7" set f7=ºÚ&&goto gamingblackio2
-if "%choose%"=="f8" set f8=ºÚ&&goto gamingblackio2
-if "%choose%"=="f9" set f9=ºÚ&&goto gamingblackio2
+if "%choose%"=="f1" (if %f1%==ÎÞ (set f1=ºÚ&&goto gamingblackio2))
+if "%choose%"=="f2" (if %f2%==ÎÞ (set f2=ºÚ&&goto gamingblackio2))
+if "%choose%"=="f3" (if %f3%==ÎÞ (set f3=ºÚ&&goto gamingblackio2))
+if "%choose%"=="f4" (if %f4%==ÎÞ (set f4=ºÚ&&goto gamingblackio2))
+if "%choose%"=="f5" (if %f5%==ÎÞ (set f5=ºÚ&&goto gamingblackio2))
+if "%choose%"=="f6" (if %f6%==ÎÞ (set f6=ºÚ&&goto gamingblackio2))
+if "%choose%"=="f7" (if %f7%==ÎÞ (set f7=ºÚ&&goto gamingblackio2))
+if "%choose%"=="f8" (if %f8%==ÎÞ (set f8=ºÚ&&goto gamingblackio2))
+if "%choose%"=="f9" (if %f9%==ÎÞ (set f9=ºÚ&&goto gamingblackio2))
 
-if "%choose%"=="g1" set g1=ºÚ&&goto gamingblackio2
-if "%choose%"=="g2" set g2=ºÚ&&goto gamingblackio2
-if "%choose%"=="g3" set g3=ºÚ&&goto gamingblackio2
-if "%choose%"=="g4" set g4=ºÚ&&goto gamingblackio2
-if "%choose%"=="g5" set g5=ºÚ&&goto gamingblackio2
-if "%choose%"=="g6" set g6=ºÚ&&goto gamingblackio2
-if "%choose%"=="g7" set g7=ºÚ&&goto gamingblackio2
-if "%choose%"=="g8" set g8=ºÚ&&goto gamingblackio2
-if "%choose%"=="g9" set g9=ºÚ&&goto gamingblackio2
+if "%choose%"=="g1" (if %g1%==ÎÞ (set g1=ºÚ&&goto gamingblackio2))
+if "%choose%"=="g2" (if %g2%==ÎÞ (set g2=ºÚ&&goto gamingblackio2))
+if "%choose%"=="g3" (if %g3%==ÎÞ (set g3=ºÚ&&goto gamingblackio2))
+if "%choose%"=="g4" (if %g4%==ÎÞ (set g4=ºÚ&&goto gamingblackio2))
+if "%choose%"=="g5" (if %g5%==ÎÞ (set g5=ºÚ&&goto gamingblackio2))
+if "%choose%"=="g6" (if %g6%==ÎÞ (set g6=ºÚ&&goto gamingblackio2))
+if "%choose%"=="g7" (if %g7%==ÎÞ (set g7=ºÚ&&goto gamingblackio2))
+if "%choose%"=="g8" (if %g8%==ÎÞ (set g8=ºÚ&&goto gamingblackio2))
+if "%choose%"=="g9" (if %g9%==ÎÞ (set g9=ºÚ&&goto gamingblackio2))
 
-if "%choose%"=="h1" set h1=ºÚ&&goto gamingblackio2
-if "%choose%"=="h2" set h2=ºÚ&&goto gamingblackio2
-if "%choose%"=="h3" set h3=ºÚ&&goto gamingblackio2
-if "%choose%"=="h4" set h4=ºÚ&&goto gamingblackio2
-if "%choose%"=="h5" set h5=ºÚ&&goto gamingblackio2
-if "%choose%"=="h6" set h6=ºÚ&&goto gamingblackio2
-if "%choose%"=="h7" set h7=ºÚ&&goto gamingblackio2
-if "%choose%"=="h8" set h8=ºÚ&&goto gamingblackio2
-if "%choose%"=="h9" set h9=ºÚ&&goto gamingblackio2
+if "%choose%"=="h1" (if %h1%==ÎÞ (set g1=ºÚ&&goto gamingblackio2))
+if "%choose%"=="h2" (if %h2%==ÎÞ (set g2=ºÚ&&goto gamingblackio2))
+if "%choose%"=="h3" (if %h3%==ÎÞ (set g3=ºÚ&&goto gamingblackio2))
+if "%choose%"=="h4" (if %h4%==ÎÞ (set g4=ºÚ&&goto gamingblackio2))
+if "%choose%"=="h5" (if %h5%==ÎÞ (set g5=ºÚ&&goto gamingblackio2))
+if "%choose%"=="h6" (if %h6%==ÎÞ (set g6=ºÚ&&goto gamingblackio2))
+if "%choose%"=="h7" (if %h7%==ÎÞ (set g7=ºÚ&&goto gamingblackio2))
+if "%choose%"=="h8" (if %h8%==ÎÞ (set g8=ºÚ&&goto gamingblackio2))
+if "%choose%"=="h9" (if %h9%==ÎÞ (set g9=ºÚ&&goto gamingblackio2))
 
-if "%choose%"=="i1" set i1=ºÚ&&goto gamingblackio2
-if "%choose%"=="i2" set i2=ºÚ&&goto gamingblackio2
-if "%choose%"=="i3" set i3=ºÚ&&goto gamingblackio2
-if "%choose%"=="i4" set i4=ºÚ&&goto gamingblackio2
-if "%choose%"=="i5" set i5=ºÚ&&goto gamingblackio2
-if "%choose%"=="i6" set i6=ºÚ&&goto gamingblackio2
-if "%choose%"=="i7" set i7=ºÚ&&goto gamingblackio2
-if "%choose%"=="i8" set i8=ºÚ&&goto gamingblackio2
-if "%choose%"=="i9" set i9=ºÚ&&goto gamingblackio2
+if "%choose%"=="i1" (if %i1%==ÎÞ (set i1=ºÚ&&goto gamingblackio2))
+if "%choose%"=="i2" (if %i2%==ÎÞ (set i2=ºÚ&&goto gamingblackio2))
+if "%choose%"=="i3" (if %i3%==ÎÞ (set i3=ºÚ&&goto gamingblackio2))
+if "%choose%"=="i4" (if %i4%==ÎÞ (set i4=ºÚ&&goto gamingblackio2))
+if "%choose%"=="i5" (if %i5%==ÎÞ (set i5=ºÚ&&goto gamingblackio2))
+if "%choose%"=="i6" (if %i6%==ÎÞ (set i6=ºÚ&&goto gamingblackio2))
+if "%choose%"=="i7" (if %i7%==ÎÞ (set i7=ºÚ&&goto gamingblackio2))
+if "%choose%"=="i8" (if %i8%==ÎÞ (set i8=ºÚ&&goto gamingblackio2))
+if "%choose%"=="i9" (if %i9%==ÎÞ (set i9=ºÚ&&goto gamingblackio2))
 goto gamingblack
 :gamingblackio2
 set /a alltick=%alltick%+1
