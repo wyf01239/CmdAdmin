@@ -1,7 +1,21 @@
 @echo off
+set wver=Beta 0.4
+set notice_site=https://wyf01239.github.io/webget/wyfadmin/notice.txt
 cls
 echo ==========>>running.log
-echo [%date% %time%]Start load>>running.log
+echo [%date% %time%]Wyfadmin %wver% Loading...>>running.log
+echo.>>running.log
+echo ^>  __      __             ___            __                             >>running.log
+echo ^> /\ \  __/\ \          /'___\          /\ \              __            >>running.log
+echo ^> \ \ \/\ \ \ \  __  __/\ \__/   __     \_\ \    ___ ___ /\_\    ___    >>running.log
+echo ^>  \ \ \ \ \ \ \/\ \/\ \ \ ,__\/'__`\   /'_` \ /' __` __`\/\ \ /' _ `\  >>running.log
+echo ^>   \ \ \_/ \_\ \ \ \_\ \ \ \_/\ \L\.\_/\ \L\ \/\ \/\ \/\ \ \ \/\ \/\ \ >>running.log
+echo ^>    \ `\___x___/\/`____ \ \_\\ \__/.\_\ \___,_\ \_\ \_\ \_\ \_\ \_\ \_\>>running.log
+echo ^>     '\/__//__/  `/___/^> \/_/ \/__/\/_/\/__,_ /\/_/\/_/\/_/\/_/\/_/\/_/>>running.log
+echo ^>                    /\___/                                             >>running.log
+echo ^>                    \/__/                                              >>running.log
+echo.>>running.log
+echo [%date% %time%]Loading...>>running.log
 title Wyfadmin
 echo Loading...
 set lang_file_err=0
@@ -73,12 +87,22 @@ set /p lang_io_show_whelp_wexit=<langs\%lang_now%\io_show_whelp_wexit.txt
 set /p lang_io_show_whelp_wreload=<langs\%lang_now%\io_show_whelp_wreload.txt
 set /p lang_io_show_wreload=<langs\%lang_now%\io_show_wreload.txt
 set /p lang_io_show_wchangelang_0=<langs\%lang_now%\io_show_wchangelang_0.txt
+echo [%date% %time%]Load language files done.>>running.log
 echo Load language files done.
-echo ---------->>running.log
 echo [%date% %time%]%lang_launcher_log_programstarted%>>running.log
 echo [%date% %time%]%lang_launcher_log_lang%>>running.log
 ping -n 2 127.0.0.1>nul
-cls
+echo ================================
+del data\notice.txt>nul
+powershell curl -o "data\notice.txt" "%notice_site%">nul
+if not exist data\notice.txt (
+	goto wgo
+)
+echo ¹«¸æÀ¸ / Notice:
+type data\notice.txt
+echo.
+echo ================================
+:wgo
 admin launch
 exit
 rem set /p lang_=<langs\%lang_now%\.txt
