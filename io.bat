@@ -1,6 +1,6 @@
 @echo off
 set wver=Beta 0.4
-set wvdate=2023.1.7
+set wverdev=202302201
 :go
 if "%1"==" " admin ioopen
 if "%1"=="" admin ioopen
@@ -51,7 +51,7 @@ goto wback
 :wver
 echo %lang_io_show_wver_1%%wver%
 echo %lang_io_show_wver_2%
-echo %lang_io_show_wver_3%%wvdate%
+echo %lang_io_show_wver_3%%wverdev%
 echo %lang_io_show_wver_4%
 echo %lang_io_show_wver_5%https://github.com/wyf01239/wyfadmin
 echo [%date% %time%]%lang_io_log_wver%>>running.log
@@ -82,20 +82,20 @@ if exist helps\%lang_now%\%2.txt (
 	echo -----START-----
 	type helps\%lang_now%\%2.txt
 	goto whelpmok
-	) else if exist helps\%lang_now%\%2.bat.txt (
-				echo helps\%lang_now%\%2.bat.txt
-				echo -----START-----
-				type helps\%lang_now%\%2.bat.txt
-				goto whelpmok
-				) else if exist helps\%lang_now%\%2 (
-								echo helps\%lang_now%\%2
-								echo -----START-----
-								type helps\%lang_now%\%2
-								goto whelpmok
-								) else (
-									echo %lang_io_show_whelpmore_err_1%"%2"%lang_io_show_whelpmore_err_2%.
-									goto wback
-									)
+) else if exist helps\%lang_now%\%2.bat.txt (
+	echo helps\%lang_now%\%2.bat.txt
+	echo -----START-----
+	type helps\%lang_now%\%2.bat.txt
+	goto whelpmok
+) else if exist helps\%lang_now%\%2 (
+	echo helps\%lang_now%\%2
+	echo -----START-----
+	type helps\%lang_now%\%2
+	goto whelpmok
+) else (
+	echo %lang_io_show_whelpmore_err_1%"%2"%lang_io_show_whelpmore_err_2%.
+	goto wback
+)
 :whelpmok
 echo.
 echo ------END------

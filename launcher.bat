@@ -1,6 +1,6 @@
 @echo off
 set wver=Beta 0.4
-set notice_site=https://wyf01239.github.io/webget/wyfadmin/notice.txt
+set wverdev=202302201
 cls
 echo ==========>>running.log
 echo [%date% %time%]Wyfadmin %wver% Loading...>>running.log
@@ -26,6 +26,10 @@ if not exist data\lang_now.txt (
 set /p lang_now=<data\lang_now.txt
 echo Now language: %lang_now%
 if %lang_file_err%==1 echo WARNING: Lang config lost. Change language to "en-us".
+if not exist data\tunnel.txt (
+	echo normal>data\tunnel.txt
+)
+set /p update_tunnel=<data\tunnel.txt
 echo Loading language files...
 set /p lang_launcher_log_programstarted=<langs\%lang_now%\launcher_log_programstarted.txt
 set /p lang_launcher_log_lang=<langs\%lang_now%\launcher_log_lang.txt
@@ -92,17 +96,84 @@ echo Load language files done.
 echo [%date% %time%]%lang_launcher_log_programstarted%>>running.log
 echo [%date% %time%]%lang_launcher_log_lang%>>running.log
 ping -n 2 127.0.0.1>nul
-echo ================================
-del data\notice.txt>nul
-powershell curl -o "data\notice.txt" "%notice_site%">nul
-if not exist data\notice.txt (
-	goto wgo
+echo [%date% %time%]Downloading Notice...>>running.log
+curl -o "data\notice.txt" "https://wyf01239.github.io/webget/wyfadmin/notice.txt">>running.log
+echo [%date% %time%]Updata Tunnel: %update_tunnel%>>running.log
+echo [%date% %time%]Getting version info...>>running.log
+if exist data\ver.txt del data\ver.txt
+if "%update_tunnel%"=="normal" (
+	curl -o "data\ver.txt" "https://wyf01239.github.io/webget/wyfadmin/ver.txt">>running.log
+) else if "%update_tunnel%"=="dev" (
+	curl -o "data\ver.txt" "https://wyf01239.github.io/webget/wyfadmin/ver_dev.txt">>running.log
+) else (
+	echo WARNING: Unknown Update Tunnel. Change Tunnel to "normal".
+	echo normal>data\tunnel.txt
+	set update_tunnel=normal
+	curl -o "data\ver.txt" "https://wyf01239.github.io/webget/wyfadmin/ver.txt">>running.log
 )
+set /p new_ver=<data\ver.txt
+if not exist data\notice.txt (
+	echo [%date% %time%]Download Notice Failed.>>running.log
+	goto wgo1
+)
+echo ================================
+echo [%date% %time%]Download notice Successful.>>running.log
 echo ¹«¸æÀ¸ / Notice:
 type data\notice.txt
 echo.
+:wgo1
+if not exist data\notice.txt (
+	echo [%date% %time%]Download version info Failed.>>running.log
+	goto wgo2
+)
 echo ================================
-:wgo
+echo [%date% %time%]Download version info Successful.>>running.log
+echo Now Tunnel: %update_tunnel%
+if "%update_tunnel%"=="normal" (
+	echo Version: %wver%
+	if "%wver%"=="%new_ver%" (
+		echo No New Version.
+		echo If You like newest version, you can edit "data\tunnel.txt":
+		echo dev
+		echo.
+rem		set have_new_ver=false
+	) else (
+		echo Have New Version.
+		echo Type "wupdate" to Update Program. But Now unavailable.
+		echo If You like newest version, you can edit "data\tunnel.txt":
+		echo dev
+		echo.
+rem		set have_new_ver=true
+	)
+) else if "%update_tunnel%"=="dev" (
+	echo Version: %wverdev% (%wver%)
+	if "%wverdev%"=="%new_ver%" (
+		echo No new version.
+rem		set have_new_ver=false
+	) else (
+		echo Have New Version.
+		goto update_dev
+	)
+)
+echo ================================
+:wgo2
 admin launch
 exit
 rem set /p lang_=<langs\%lang_now%\.txt
+:update_dev
+echo Downloading update ver %wverdev% (%wver%)...
+if exist data\updatedev.tar del data\updatedev.tar 
+curl -o "data\updatedev.tar" "https://wyf01239.github.io/webget/wyfadmin/updatedev.tar">>running.log
+if not exist data\updatedev.tar (
+	echo Download Update Failed.
+	goto wgo2
+)
+echo Creating Temp File...
+echo ^@echo off>temp\updatedev.bat
+echo echo Extracting tar File...>>temp\updatedev.bat
+echo tar -x -o data\updatedev.tar>>temp\updatedev.bat
+echo Update Successful.>>temp\updatedev.bat
+echo admin updateddev>>temp\updatedev.bat
+echo exit>>temp\updatedev.bat
+start temp\updatedev.bat
+exit
