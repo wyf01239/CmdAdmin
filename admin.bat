@@ -1,15 +1,12 @@
 @echo off
 title Wyfadmin
 set wver=Beta 0.4
-set wverdev=202302201
 set /p lang_now=<data\lang_now.txt
 if "%1"=="" launcher
 if "%1"==" " launcher
-if "%1"=="launch" goto go
-if "%1"=="wback" goto goto
-if "%1"=="ioopen" goto ioopen
-if "%1"=="updateddev" goto updateddev
-goto wend
+if %1==launch goto go
+if %1==wback goto goto
+if %1==ioopen goto ioopen
 :go
 echo [%date% %time%]%lang_admin_log_ver%%wver%>>running.log
 echo %lang_admin_show_ver%%wver%
@@ -28,11 +25,3 @@ exit
 :ioopen
 echo [%date% %time%]%lang_admin_log_ioopen%>>running.log
 goto goto
-:updateddev
-echo Updated.
-echo Now version is %wverdev% (%wver%)
-echo Back to launcher after 5s...
-ping -n 5 127.0.0.1>nul
-launcher
-exit
-:wend
