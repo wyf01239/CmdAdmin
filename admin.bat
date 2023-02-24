@@ -4,9 +4,9 @@ set wver=Beta 0.4
 set /p lang_now=<data\lang_now.txt
 if "%1"=="" launcher
 if "%1"==" " launcher
-if %1==launch goto go
-if %1==wback goto goto
-if %1==ioopen goto ioopen
+if "%1"=="launch" goto go
+if "%1"=="wback" goto goto
+if "%1"=="ioopen" goto ioopen
 :go
 echo [%date% %time%]%lang_admin_log_ver%%wver%>>running.log
 echo %lang_admin_show_ver%%wver%

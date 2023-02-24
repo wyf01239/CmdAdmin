@@ -4,24 +4,24 @@ set wvdate=2023.1.7
 :go
 if "%1"==" " admin ioopen
 if "%1"=="" admin ioopen
-if %1==exit goto exit
-if %1==wexit goto wexit
-if %1==null goto wback
-if %1==wsetuppluginalldone goto wsetuppalldone
-if %1==cd goto nocd
-if %1==cd.. goto nocd
-if %1==con goto nonul
-if %1==nul goto nonul
-if %1==aux goto nonul
-if %1==wdellog goto dlog
-if %1==wver goto wver
-if %1==whelp goto whelp
-if %1==whelpmore goto whelpm
-if %1==wplugins goto wsplugin
-if %1==whmlist goto whmlist
-if %1==wsetupplugin goto wsetupp
-if %1==wchangelang goto clang
-if %1==wreload goto reload
+if "%1"=="exit" goto exit
+if "%1"=="wexit" goto wexit
+if "%1"=="null" goto wback
+if "%1"=="wsetuppluginalldone" goto wsetuppalldone
+if "%1"=="cd" goto nocd
+if "%1"=="cd.." goto nocd
+if "%1"=="con" goto nonul
+if "%1"=="nul" goto nonul
+if "%1"=="aux" goto nonul
+if "%1"=="wdellog" goto dlog
+if "%1"=="wver" goto wver
+if "%1"=="whelp" goto whelp
+if "%1"=="whelpmore" goto whelpm
+if "%1"=="wplugins" goto wsplugin
+if "%1"=="whmlist" goto whmlist
+if "%1"=="wsetupplugin" goto wsetupp
+if "%1"=="wchangelang" goto clang
+if "%1"=="wreload" goto reload
 echo [%date% %time%]%lang_io_log_runother%>>running.log
 if exist plugins\%1 goto wopenplugin
 if exist plugins\%1.bat goto wopenplugin
@@ -82,20 +82,20 @@ if exist helps\%lang_now%\%2.txt (
 	echo -----START-----
 	type helps\%lang_now%\%2.txt
 	goto whelpmok
-	) else if exist helps\%lang_now%\%2.bat.txt (
-				echo helps\%lang_now%\%2.bat.txt
-				echo -----START-----
-				type helps\%lang_now%\%2.bat.txt
-				goto whelpmok
-				) else if exist helps\%lang_now%\%2 (
-								echo helps\%lang_now%\%2
-								echo -----START-----
-								type helps\%lang_now%\%2
-								goto whelpmok
-								) else (
-									echo %lang_io_show_whelpmore_err_1%"%2"%lang_io_show_whelpmore_err_2%.
-									goto wback
-									)
+) else if exist helps\%lang_now%\%2.bat.txt (
+	echo helps\%lang_now%\%2.bat.txt
+	echo -----START-----
+	type helps\%lang_now%\%2.bat.txt
+	goto whelpmok
+) else if exist helps\%lang_now%\%2 (
+	echo helps\%lang_now%\%2
+	echo -----START-----
+	type helps\%lang_now%\%2
+	goto whelpmok
+) else (
+	echo %lang_io_show_whelpmore_err_1%"%2"%lang_io_show_whelpmore_err_2%.
+	goto wback
+)
 :whelpmok
 echo.
 echo ------END------
