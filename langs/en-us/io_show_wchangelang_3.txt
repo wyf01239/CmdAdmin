@@ -1,0 +1,1 @@
+You can use "wchanglang (language configuration)" to switch to a language (requires restart program)

@@ -1,0 +1,14 @@
+Plugin: msinfo32 v1.0
+by wyf9. 2023.1.7
+Reference: msinfo32.exe
+
+msinfo32 {get/get-txt} [file]
+get: Output system information (.nfo), which can be opened using msinfo32.exe
+get-txt: Output system information (.txt), which can be opened directly using Notepad
+file: File to output to (without suffix)
+
+example:
+msinfo32 get testfile
+msinfo32 get-txt testtxt
+
+The file will be saved to the "Files" folder in the program directory

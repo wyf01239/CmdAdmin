@@ -1,0 +1,1 @@
+If the program crashes or displays an exception at startup, use repair.bat to repair the language files and configuration.

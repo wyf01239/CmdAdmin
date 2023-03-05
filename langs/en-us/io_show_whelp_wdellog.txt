@@ -1,0 +1,1 @@
+Delete "running.log" and quit.

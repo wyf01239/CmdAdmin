@@ -1,0 +1,1 @@
+The plugin is available at (None). The plugin acquisition has not yet been developed, and the downloaded Wyfadmin contains all plugins by default.

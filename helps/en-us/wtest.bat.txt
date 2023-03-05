@@ -1,0 +1,9 @@
+Test Plugin: wtest v1.0
+by wyf9. 2022.12.27
+
+wtest {1/2/3/4}
+1:Show "test"
+2:Show "test plugin"
+3:Show "a test plugin"
+4:Show "is a test plugin"
+5:Show "this is a test plugin"
