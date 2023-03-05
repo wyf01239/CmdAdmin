@@ -2,11 +2,12 @@
 set pluginname=%0
 title Wyfadin - %pluginname:plugins\=%
 rem ----------
-echo 确定继续运行?(y(yes)/n(no))
+echo 确定继续运行?(y(yes)/n(no)) q: qq群模式
 set /p yn=^>^>
 if %yn%==y goto yes
 if %yn%==Y goto yes
 if %yn%==yes goto yes
+if %yn%==q goto q
 goto end
 :yes
 cls
@@ -23,6 +24,17 @@ set test=哼哼哼
 cls
 echo %test%
 set test=%test%啊
+goto test
+:q
+echo 哼
+timeout /t 1 /nobreak>nul
+echo 哼哼
+timeout /t 1 /nobreak>nul
+echo 哼哼哼
+timeout /t 1 /nobreak>nul
+set test=哼哼哼
+:test
+echo 啊啊
 goto test
 :end
 rem ----------

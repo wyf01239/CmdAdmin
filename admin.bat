@@ -1,6 +1,6 @@
 @echo off
 title Wyfadmin
-set wver=Beta 0.4
+set wver=Beta 0.5
 set /p lang_now=<data\lang_now.txt
 if "%1"=="" launcher
 if "%1"==" " launcher

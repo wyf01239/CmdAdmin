@@ -1,5 +1,5 @@
 @echo off
-set wver=Beta 0.4
+set wver=Beta 0.5
 set notice_site=https://wyf01239.github.io/webget/wyfadmin/notice.txt
 cls
 echo ==========>>running.log
@@ -92,9 +92,12 @@ echo Load language files done.
 echo [%date% %time%]%lang_launcher_log_programstarted%>>running.log
 echo [%date% %time%]%lang_launcher_log_lang%>>running.log
 ping -n 1 127.0.0.1>nul
-del data\notice.txt>nul
-curl -o "data\notice.txt" "%notice_site%">nul
+del data\notice.txt 2>nul
+echo Downloading Notice...
+echo Press Ctrl+C and input "n" to Cancel.
+curl -s -o "data\notice.txt" "%notice_site%">nul
 if not exist data\notice.txt (
+	echo Download Notice Failed.
 	goto wgo
 )
 echo ================================
