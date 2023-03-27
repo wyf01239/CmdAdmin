@@ -1,8 +1,10 @@
 @echo off
-title CMD - CmdAdmin ...
+title %lang_cmd% - CmdAdmin ...
 
 if "%1" == "/t" echo Test
+if "%1" == "/q" goto quit
+if "%1" == "/v" goto wver
+goto wend
 
-
-title CMD - CmdAdmin
-:wEnd
+:wend
+title %lang_cmd% - CmdAdmin

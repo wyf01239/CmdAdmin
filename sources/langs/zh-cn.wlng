@@ -1,6 +1,6 @@
-# Language "zh-cn" by wyf9
+# CmdAdmin language file "zh-cn" by wyf9
 # Last update: 2023-3-26
 # Disabled line start by "#".
-#
+
 lang_cmd=命令提示符
 lang_all_rights_reserved=保留所有权.

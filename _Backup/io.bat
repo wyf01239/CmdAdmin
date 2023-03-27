@@ -141,13 +141,13 @@ goto wback
 :clang
 if "%2"=="" goto clang2
 if "%2"==" " goto clang2
-if exist langs\%2 goto clanggo
+if exist sources\langs\%2 goto clanggo
 echo %lang_io_show_wchangelang_0%
 exit
 :clang2
 echo %lang_io_show_wchangelang_1%%lang_now%
 echo %lang_io_show_wchangelang_2%
-dir /a:d /b langs\
+dir /a:d /b sources\langs\
 echo %lang_io_show_wchangelang_3%
 goto wback
 :clanggo
