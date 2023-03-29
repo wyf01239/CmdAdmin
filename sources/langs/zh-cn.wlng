@@ -1,6 +1,17 @@
 # CmdAdmin language file "zh-cn" by wyf9
 # Last update: 2023-3-26
+# Abour words: lang__xxx_xxx=xxx
+# About commands: lang_xxx_xxx=xxx
 # Disabled line start by "#".
 
-lang_cmd=命令提示符
-lang_all_rights_reserved=保留所有权.
+lang__cmd=命令提示符
+lang__all_rights_reserved=保留所有权.
+lang_wver_lang=语言
+lang_wver_copy=版权所有
+lang_wver_nowlang=Chinese (简体中文)
+lang_wver_project_home=项目地址
+lang__command=命令
+lang__loaded=已加载
+lang__module=个模块
+lang__modules=个模块
+lang__load_ok=加载完成

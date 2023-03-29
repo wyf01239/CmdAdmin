@@ -1,2 +1,2 @@
 @echo off
-echo 1145141919810
+if "%1" == "/winit" echo 1145141919810
