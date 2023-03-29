@@ -1,7 +1,0 @@
-内置命令:wsetupplugin v1.0
-by wyf9.2022.12.26
-
-wsetupplugin {-all/-onlyexe} {file}
--all:安装完整插件(包含帮助信息,将在拷贝完成后执行插件名 /install)
--onlyexe:仅安装主程序,不导出帮助信息
-file:要安装的插件(直接拖入即可)
