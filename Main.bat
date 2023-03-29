@@ -3,8 +3,7 @@ set wpath=%~dp0
 cd %wpath%
 
 call sources\wAPIGetTimeToSec.bat
-set wLoadStarts=%wAPIBack_GTTS_s%
-set wLoadStartms=%wAPIBack_GTTS_ms%
+set wLoadStart=%wAPIBack_GTTS%
 
 set wver=0.6
 set wvdate=2023.3.26
@@ -44,19 +43,20 @@ doskey /OVERSTRIKE ca=%wpath%wCmd.bat $1 $2 $4 $5 $6 $7 $8 $9
 prompt $P$S$G$G$S
 
 call sources\wAPIGetTimeToSec.bat
-set /a wLoadSecs0=wAPIBack_GTTS_s-wLoadStarts
-set /a wLoadSecms0=wAPIBack_GTTS_ms-wLoadStartms
-if %wLoadSecms0% LSS 0 (
-    set /a wLoadSecs=wLoadSec-1
-    set /a wLoadSecms=100-%wLoadSecms0:~-2%
-) else (
-    set wLoadSecs=%wLoadSecs0%
-    set wLoadSecms=%wLoadSecms0%
+set /a wLoadSec=wAPIBack_GTTS-wLoadStart
+if %wLoadSec% LSS 1 (
+    set wLoadSec=%lang__smaller% 1
+) else if %wLoadSec% GTR 960 (
+    if %time% == 0:0:* (
+        set wLoadSec=[Error]
+    ) else (
+        set wLoadSec=[Too Long]
+    )
 )
-set wLoadSec=%wLoadSecs%.%wLoadSecms%
+
 if %wLoadModules% == 1 (
     echo [CA] %lang__loaded% %wLoadModules% %lang__module%.
 ) else (
     echo [CA] %lang__loaded% %wLoadModules% %lang__modules%.
 )
-echo [CA]CmdAdmin %lang__load_ok%. (%wLoadSec%s)
+echo [CA] CmdAdmin %lang__load_ok%. (%wLoadSec%s)
