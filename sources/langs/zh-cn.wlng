@@ -1,7 +1,8 @@
 # CmdAdmin language file "zh-cn" by wyf9
 # Last update: 2023-3-26
-# Abour words: lang__xxx_xxx=xxx
-# About commands: lang_xxx_xxx=xxx
+# About commands: lang_xxx_xxx=xxxxx
+# About words: lang__xxx_xxx=xxxxx
+# About logs: lang___xxx_xxx=xxxxx
 # Disabled line start by "#".
 
 lang__cmd=命令提示符
@@ -16,3 +17,14 @@ lang__module=个模块
 lang__modules=个模块
 lang__smaller=小于
 lang__load_ok=加载完成
+lang___load_lang_ok=语言文件加载完成.
+lang___have_admin=检测到管理员权限
+lang___init_modules=正在加载模块...
+lang___init_modules_ok=模块加载完成.
+lang___load_end_time=加载完成时的时间戳(一天内)
+lang___load_time=加载时间
+lang___load_time_small=加载时间小于1, 已重置为小于1.
+lang___load_time_long=加载时间太长, 可能是因为跨天而产生的错误.
+lang___load_modules_ok_1=已加载
+lang___load_modules_ok_2=个模块
+lang___load_ok=加载完成.

@@ -1,6 +1,10 @@
 @echo off
-if %isadmin% = true (
-    title %lang__cmd% - CmdAdmin - Admin Perm ...
+
+set isadmin=False
+whoami /groups | find "S-1-16-12288">nul && set isadmin=True
+
+if %isadmin% == true (
+    title %lang__cmd% - CmdAdmin - Admin ...
 ) else (
     title %lang__cmd% - CmdAdmin ...
 )
@@ -14,13 +18,12 @@ goto wend
 :wver
 echo CmdAdmin v%wver%. %wvdate%
 echo %lang_wver_lang%: %wlangnow% - %lang_wver_nowlang%
-echo %lang_wver_copy% (c)%wvyear% wyf9. %lang__all_rights_reserved%
+echo %lang_wver_copy% (c) %wvyear% wyf9. %lang__all_rights_reserved%
 echo %lang_wver_project_home%: https://github.com/wyf01239/CmdAdmin
 
-
 :wend
-if %isadmin% = true (
-    title %lang__cmd% - CmdAdmin - Admin Perm
+if %isadmin% == true (
+    title %lang__cmd% - CmdAdmin - Admin
 ) else (
     title %lang__cmd% - CmdAdmin
 )
