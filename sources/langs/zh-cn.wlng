@@ -1,5 +1,5 @@
 # CmdAdmin language file "zh-cn" by wyf9
-# Last update: 2023-3-26
+# Last update: 2023-4-1
 # About commands: lang_xxx_xxx=xxxxx
 # About words: lang__xxx_xxx=xxxxx
 # About logs: lang___xxx_xxx=xxxxx
@@ -28,3 +28,8 @@ lang___load_time_long=加载时间太长, 可能是因为跨天而产生的错误.
 lang___load_modules_ok_1=已加载
 lang___load_modules_ok_2=个模块
 lang___load_ok=加载完成.
+lang___running_command=运行 CA 命令
+lang_quitting=正在退出
+lang__unknown_command=未知的命令
+lang___unknown_command=未知的命令
+lang___quitting=正在退出
