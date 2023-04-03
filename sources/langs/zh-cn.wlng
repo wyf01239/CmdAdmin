@@ -1,9 +1,10 @@
 # CmdAdmin language file "zh-cn" by wyf9
-# Last update: 2023-4-1
+# Last update: 2023-4-2
 # About commands: lang_xxx_xxx=xxxxx
 # About words: lang__xxx_xxx=xxxxx
 # About logs: lang___xxx_xxx=xxxxx
 # Disabled line start by "#".
+# Delim with ";".
 
 lang__cmd=命令提示符
 lang__all_rights_reserved=保留所有权.
@@ -33,3 +34,9 @@ lang_quitting=正在退出
 lang__unknown_command=未知的命令
 lang___unknown_command=未知的命令
 lang___quitting=正在退出
+lang_wdellog=已删除
+lang_whelp_name=帮助文件
+lang_whelp_unknown=找不到帮助文件
+lang___whelp_showing=显示帮助文件
+lang___whelp_error=找不到帮助文件
+lang__load_time=加载时间

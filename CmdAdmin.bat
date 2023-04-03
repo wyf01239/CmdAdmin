@@ -84,4 +84,5 @@ cd %wpath%wPath 2>nul
 cd %wlastpath% 2>nul
 echo [Info %date% %time%] CmdAdmin %lang___load_ok% >>%wpath%data\running.log
 echo -------------------------------- >>%wpath%data\running.log
-echo [CA] CmdAdmin %lang__load_ok%. (%wLoadSec%s)
+echo [CA] %lang__load_time%: %wLoadSec%s
+echo [CA] CmdAdmin %lang__load_ok%.
