@@ -50,13 +50,17 @@ goto wend
 
 :whelp
     if exist %wpath%sources\helps\%2.whelp (
-        
-    ) else if exist %wpath%sources\helps\%wlangnow%.whelp (
         echo [Info %date% %time%] %lang___whelp_showing% "%wlangnow%">>%wpath%data\running.log
         echo %lang_whelp_name% %wlangnow%.whelp:
         for /f "eol=# delims=;" %%l in (%wpath%sources\helps\%wlangnow%.whelp) do (
                 echo %%l
-        )
+            )
+    ) else if exist %wpath%sources\helps\%wlangnow%.whelp (
+        echo [Warn %date% %time%] %lang___whelp_showing% "%wlangnow%">>%wpath%data\running.log
+        echo %lang_whelp_name% %wlangnow%.whelp:
+        for /f "eol=# delims=;" %%l in (%wpath%sources\helps\%wlangnow%.whelp) do (
+                echo %%l
+            )
     ) else (
         echo [Error %date% %time%] %lang___whelp_error% "%wlangnow%">>%wpath%data\running.log
         echo %lang_whelp_unknown%: %wlangnow%.whelp
