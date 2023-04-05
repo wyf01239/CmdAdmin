@@ -13,17 +13,22 @@ if "%1" == "/t" (
 if "%1" == "/q" goto quit
 if "%1" == "/e" (
     echo [Info %date% %time%]Quitting CMD... >>%wpath%data\running.log
+    set CmdAdmin=
     exit 0
 )
 if "%1" == "/v" goto wver
 if "%1" == "/h" goto whelp
 if "%1" == "/d" goto wdellog
 echo [Warn %date% %time%] %lang___unknown_command% >>%wpath%data\running.log
-echo [CA] %lang__unknown_command%.
+if not "%1" == "" (
+    if not "%1" == " " (
+        echo [CA] %lang__unknown_command%.
+    )
+)
 goto wend
 
 :wver
-    echo [Info %date% %time%] Showing version >>%wpath%data\running.log
+    echo [Info %date% %time%] %lang___wver% >>%wpath%data\running.log
     echo CmdAdmin v%wver%. %wvdate%
     echo %lang_wver_lang%: %wlangnow% - %lang_wver_nowlang%
     echo %lang_wver_copy% (c) %wvyear% wyf9. %lang__all_rights_reserved%
@@ -37,8 +42,9 @@ goto wend
     echo [CA] %lang_quitting% CmdAdmin...
     prompt $P$G
     title %lang__cmd%
-    cd %wlastpath% 2>nul
+    cd /d %wlastpath% 2>nul
     start %wpath%sources\AltAddF10.vbs
+    set CmdAdmin=
     cmd
     exit
 
@@ -68,4 +74,7 @@ goto wend
 
 :wend
     title %lang__cmd% - CmdAdmin
+    if "%wca%" == "True" (
+    goto %wcalastpath%
+)
     exit /b 0

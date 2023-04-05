@@ -8,6 +8,13 @@ set wpath=%~dp0
 cd %wpath%
 set wver=0.6
 set wvdate=2023.4.1
+set CmdAdmin=wyf9
+set wcal=False
+
+if "%1" == "/cal" (
+    set wlastpath=%2
+    set wcal=True
+)
 
 echo ================================ >>%wpath%data\running.log
 echo  ____                    __  ______      __                              >>%wpath%data\running.log
@@ -50,6 +57,7 @@ echo [CA] CmdAdmin v%wver% %wvdate% - %wlangnow%. %lang__all_rights_reserved%
 
 
 echo [Info %date% %time%] %lang___init_modules% >>%wpath%data\running.log
+cd.
 for /f "eol=; delims=" %%i in ('dir %wpath%modules\ /b /s') do (
     call "%%i" /winit
     if not %errorlevel% NEQ 0 (set /a wLoadModules=wLoadModules+1)
@@ -88,4 +96,7 @@ cd %wlastpath% 2>nul
 echo [Info %date% %time%] CmdAdmin %lang___load_ok% >>%wpath%data\running.log
 echo -------------------------------- >>%wpath%data\running.log
 echo [CA] %lang__load_time%: %wLoadSec%s
+if "%wcal%" == "True" (
+    cd %wpath%wPath
+)
 echo [CA] CmdAdmin %lang__load_ok%.

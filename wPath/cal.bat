@@ -1,3 +1,6 @@
+@echo off
 set calPath=%~dp0
-goto %calPath%
-..\CmdAdmin.bat /CAL
+set cd=
+set wcallastpath=%cd%
+cd %calPath%
+..\CmdAdmin.bat /cal "%wcallastpath%"
