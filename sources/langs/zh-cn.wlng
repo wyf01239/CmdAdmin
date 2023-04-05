@@ -40,3 +40,4 @@ lang_whelp_unknown=找不到帮助文件
 lang___whelp_showing=显示帮助文件
 lang___whelp_error=找不到帮助文件
 lang__load_time=加载时间
+lang__load_modules_nope=没有加载模块

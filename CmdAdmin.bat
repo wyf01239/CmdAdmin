@@ -46,13 +46,14 @@ for /f "eol=# delims=;" %%l in (%wpath%sources\langs\%wlangnow%.wlng) do (
 echo [Info %date% %time%] %lang___load_lang_ok% >>%wpath%data\running.log
 
 title %lang__cmd% - CmdAdmin
-echo [CA] CmdAdmin v%wver% %wvdate% - %wlangnow%.%lang__all_rights_reserved%
+echo [CA] CmdAdmin v%wver% %wvdate% - %wlangnow%. %lang__all_rights_reserved%
 
 
 echo [Info %date% %time%] %lang___init_modules% >>%wpath%data\running.log
 for /f "eol=; delims=" %%i in ('dir %wpath%modules\ /b /s') do (
     call "%%i" /winit
-    set /a wLoadModules=wLoadModules+1
+    if not %errorlevel% NEQ 0 (set /a wLoadModules=wLoadModules+1)
+    cd.
     )
 echo [Info %date% %time%] %lang___init_modules_ok% >>%wpath%data\running.log
 
@@ -77,6 +78,8 @@ if %wLoadSec% LSS 1 (
 echo [Info %date% %time%] %lang___load_modules_ok_1% %wLoadModules% %lang___load_modules_ok_2%. >>%wpath%data\running.log
 if %wLoadModules% == 1 (
     echo [CA] %lang__loaded% %wLoadModules% %lang__module%.
+) else if %wLoadModules% LEQ 0 (
+    echo [CA] %lang__load_modules_nope%.
 ) else (
     echo [CA] %lang__loaded% %wLoadModules% %lang__modules%.
 )
