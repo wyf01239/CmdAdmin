@@ -1,7 +1,5 @@
 # CmdAdmin
 
-Windows CMD.exe 增强版
+Windows **CMD** 扩展工具
 
-# 已知问题
-
-启动时间计算不完善 (不能在23点59分5x秒启动程序, 否则可能会出现计算问题)
+正在开发阶段, 原名 [wyfadmin](https://github.com/wyf01239/wyfadmin_old)

@@ -1,5 +1,5 @@
 @echo off
-rem if "%1" == "" goto 
+:: if "%1" == "" goto 
 
 echo [Info %date% %time%] %lang___running_command%: CA %1 %2 %3 %4 %5 %6 %7 %8 %9 >>%wpath%data\running.log
 title %lang__cmd% - CmdAdmin ...
@@ -20,6 +20,8 @@ if "%1" == "/v" goto wver
 if "%1" == "/h" goto whelp
 if "%1" == "/d" goto wdellog
 echo [Warn %date% %time%] %lang___unknown_command% >>%wpath%data\running.log
+if exist %wpath%plugins\%1 goto plg
+if exist %wpath%plugins\%1.bat goto plg
 if not "%1" == "" (
     if not "%1" == " " (
         echo [CA] %lang__unknown_command%.
