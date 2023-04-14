@@ -92,9 +92,6 @@ echo [Info %date% %time%] %lang___load_time%: %wLoadSec%s >>%wpath%data\running.
 if %wLoadSec% LSS 1 (
     set wLoadSec=%lang__smaller% 1
     echo [Info %date% %time%] %lang___load_time_small% >>%wpath%data\running.log
-) else if %wLoadSec% GTR 960 (
-    set wLoadSec=[Error]
-    echo [Error %date% %time%] %lang___load_time_long% >>%wpath%data\running.log
 )
 
 echo [Info %date% %time%] %lang___load_modules_ok_1% %wLoadModules% %lang___load_modules_ok_2%. >>%wpath%data\running.log
