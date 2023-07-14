@@ -35,9 +35,15 @@ echo [Info %date% %time%] CmdAdmin v%wver% Build date %wvdate% >>%wpath%data\run
 echo [Info %date% %time%] Loading... >>%wpath%data\running.log
 
 :: get start timestamp
-call sources\wAPIGetTimeToSec.bat
-set wLoadStart=%wAPIBack_GTTS%
-echo [Info %date% %time%] Load start timestamp in day: %wAPIBack_GTTS% >>%wpath%data\running.log
+cd.
+call python _source\get_timestamp.py>nul 2>nul
+if not %ERRORLEVEL% == 0 (
+    cd.
+    call sources\get_timestamp
+)
+set /p wLoadStart=<data\temp\time.txt
+
+echo [Info %date% %time%] Load start timestamp in day: %wLoadStart% >>%wpath%data\running.log
 
 :: reset modules num
 set wvyear=2023
@@ -73,8 +79,7 @@ cd.
 :: load modules
 for /f "eol=; delims=" %%i in ('dir %wpath%modules\ /b /s') do (
     call "%%i" /winit
-:: xx GTR xx == xx > xx
-    if %errorlevel% GTR 0 (set /a wLoadModules=wLoadModules+1)
+    set /a wLoadModules=wLoadModules+1
     cd.
     )
 echo [Info %date% %time%] %lang___init_modules_ok% >>%wpath%data\running.log
@@ -85,19 +90,32 @@ doskey /OVERSTRIKE ca=%wpath%wCmd.bat $1 $2 $4 $5 $6 $7 $8 $9
 ::change prompt to "%cd% >> "
 prompt $P$S$G$G$S
 
-call sources\wAPIGetTimeToSec.bat
-echo [Info %date% %time%] %lang___load_end_time%: %wAPIBack_GTTS% >>%wpath%data\running.log
-set /a wLoadSec=wAPIBack_GTTS-wLoadStart
-echo [Info %date% %time%] %lang___load_time%: %wLoadSec%s >>%wpath%data\running.log
-if %wLoadSec% LSS 1 (
-    set wLoadSec=%lang__smaller% 1
-    echo [Info %date% %time%] %lang___load_time_small% >>%wpath%data\running.log
+:: get end timestamp
+cd.
+call python _source\get_timestamp.py>nul 2>nul
+if not %ERRORLEVEL% == 0 (
+    cd.
+    call sources\get_timestamp
 )
+set /p wLoadEnd=<data\temp\time.txt
+
+echo [Info %date% %time%] %lang___load_end_time%: %wLoadEnd% >>%wpath%data\running.log
+
+:: calc load time
+cd.
+call python _source\wcalc.py 2 %wLoadEnd% %wLoadStart%
+if not %ERRORLEVEL% == 0 (
+    call sources\wcalc 2 %wLoadEnd% %wLoadStart%
+)
+set /p wLoadSec=<data\temp\calced.txt
+
+
+echo [Info %date% %time%] %lang___load_time%: %wLoadSec%s >>%wpath%data\running.log
 
 echo [Info %date% %time%] %lang___load_modules_ok_1% %wLoadModules% %lang___load_modules_ok_2%. >>%wpath%data\running.log
 if %wLoadModules% == 1 (
     echo [CA] %lang__loaded% %wLoadModules% %lang__module%.
-) else if %wLoadModules% LEQ 0 (
+) else if %wLoadModules% == 0 (
     echo [CA] %lang__load_modules_nope%.
 ) else (
     echo [CA] %lang__loaded% %wLoadModules% %lang__modules%.

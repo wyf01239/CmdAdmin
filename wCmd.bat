@@ -20,10 +20,10 @@ if "%1" == "/v" goto wver
 if "%1" == "/h" goto whelp
 if "%1" == "/d" goto wdellog
 echo [Warn %date% %time%] %lang___unknown_command% >>%wpath%data\running.log
-if exist %wpath%plugins\%1 goto plg
-if exist %wpath%plugins\%1.bat goto plg
 if not "%1" == "" (
     if not "%1" == " " (
+        if exist %wpath%plugins\%1 goto plg
+        if exist %wpath%plugins\%1.bat goto plg
         echo [CA] %lang__unknown_command%.
     )
 )
@@ -80,3 +80,6 @@ goto wend
     goto %wcalastpath%
 )
     exit /b 0
+
+:plg
+echo ...
