@@ -20,28 +20,20 @@ if "%1" == "/cal" (
     set wcal=True
 )
 
+::DosKey
+doskey logging=%wpath%sources\stdbat\log\info $*
+doskey logwarn=%wpath%sources\stdbat\log\warn $*
+doskey logerror=%wpath%sources\stdbat\log\error $*
+
 echo ================================ >>%wpath%data\running.log
 ::draw a text picture in Running.log :)
-echo  ____                    __  ______      __                              >>%wpath%data\running.log
-echo /\  _`\                 /\ \/\  _  \    /\ \              __             >>%wpath%data\running.log
-echo \ \ \/\_\    ___ ___    \_\ \ \ \L\ \   \_\ \    ___ ___ /\_\    ___     >>%wpath%data\running.log
-echo  \ \ \/_/_ /' __` __`\  /'_` \ \  __ \  /'_` \ /' __` __`\/\ \ /' _ `\   >>%wpath%data\running.log
-echo   \ \ \L\ \/\ \/\ \/\ \/\ \L\ \ \ \/\ \/\ \L\ \/\ \/\ \/\ \ \ \/\ \/\ \  >>%wpath%data\running.log
-echo    \ \____/\ \_\ \_\ \_\ \___,_\ \_\ \_\ \___,_\ \_\ \_\ \_\ \_\ \_\ \_\ >>%wpath%data\running.log
-echo     \/___/  \/_/\/_/\/_/\/__,_ /\/_/\/_/\/__,_ /\/_/\/_/\/_/\/_/\/_/\/_/ >>%wpath%data\running.log
-echo. >>%wpath%data\running.log
+call sources\stdbat\draw
 
 echo [Info %date% %time%] CmdAdmin v%wver% Build date %wvdate% >>%wpath%data\running.log
 echo [Info %date% %time%] Loading... >>%wpath%data\running.log
 
 :: get start timestamp
-cd.
-call python _source\get_timestamp.py>nul 2>nul
-if not %ERRORLEVEL% == 0 (
-    cd.
-    call sources\get_timestamp
-)
-set /p wLoadStart=<data\temp\time.txt
+set wLoadStart=%wBack%
 
 echo [Info %date% %time%] Load start timestamp in day: %wLoadStart% >>%wpath%data\running.log
 
@@ -50,7 +42,7 @@ set wvyear=2023
 set wLoadModules=0
 
 if not exist %wpath%data\config\LangNow.wcfg (
-:: ¡ú¡ý LangNow.wcfg lost :(
+:: ¡ú¡ý if LangNow.wcfg lost
     echo en-us>%wpath%data\config\LangNow.wcfg
     echo [Warn %date% %time%] Lang file lost. Changed to en-us. >>%wpath%data\running.log
     echo [CA] WARNING: Langusge File lost.
@@ -85,7 +77,7 @@ for /f "eol=; delims=" %%i in ('dir %wpath%modules\ /b /s') do (
 echo [Info %date% %time%] %lang___init_modules_ok% >>%wpath%data\running.log
 
 ::doskey: CA command
-doskey /OVERSTRIKE ca=%wpath%wCmd.bat $1 $2 $4 $5 $6 $7 $8 $9
+doskey /OVERSTRIKE ca=%wpath%wCmd.bat $*
 
 ::change prompt to "%cd% >> "
 prompt $P$S$G$G$S
