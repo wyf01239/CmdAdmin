@@ -1,25 +1,29 @@
 @echo off
 :: if "%1" == "" goto 
 
-echo [Info %date% %time%] %lang___running_command%: CA %1 %2 %3 %4 %5 %6 %7 %8 %9 >>%wpath%data\running.log
+if not "%CA%" == "wyf9" (
+    exit /b 1
+)
+
+logging Main %lang___running_command%: CA %*
 title %lang__cmd% - CmdAdmin ...
 set wCleanLog=False
 
 if "%1" == "/t" (
-    echo [Info %date% %time%] Test >>%wpath%data\running.log
+    logging Main/Proc Test
     echo Test
     goto wend
     )
 if "%1" == "/q" goto quit
 if "%1" == "/e" (
-    echo [Info %date% %time%]Quitting CMD... >>%wpath%data\running.log
+    logging Main/Proc Quitting CMD...
     set CmdAdmin=
     exit 0
 )
 if "%1" == "/v" goto wver
 if "%1" == "/h" goto whelp
 if "%1" == "/d" goto wdellog
-echo [Warn %date% %time%] %lang___unknown_command% >>%wpath%data\running.log
+warning Main/Proc %lang___unknown_command%
 if not "%1" == "" (
     if not "%1" == " " (
         if exist %wpath%plugins\%1 goto plg
@@ -30,7 +34,7 @@ if not "%1" == "" (
 goto wend
 
 :wver
-    echo [Info %date% %time%] %lang___wver% >>%wpath%data\running.log
+    logging Main %lang___wver%
     echo CmdAdmin v%wver%. %wvdate%
     echo %lang_wver_lang%: %wlangnow% - %lang_wver_nowlang%
     echo %lang_wver_copy% (c) %wvyear% wyf9. %lang__all_rights_reserved%
@@ -39,7 +43,7 @@ goto wend
 
 :quit
     if %wCleanLog% == False (
-        echo [Info %date% %time%] %lang___quitting% CmdAdmin... >>%wpath%data\running.log
+        logging Main %lang___quitting% CmdAdmin...
     )
     echo [CA] %lang_quitting% CmdAdmin...
     prompt $P$G
@@ -58,19 +62,19 @@ goto wend
 
 :whelp
     if exist %wpath%sources\helps\%2.whelp (
-        echo [Info %date% %time%] %lang___whelp_showing% "%wlangnow%">>%wpath%data\running.log
+        logging Main/Help %lang___whelp_showing% "%wlangnow%"
         echo %lang_whelp_name% %wlangnow%.whelp:
         for /f "eol=# delims=;" %%l in (%wpath%sources\helps\%wlangnow%.whelp) do (
                 echo %%l
             )
     ) else if exist %wpath%sources\helps\%wlangnow%.whelp (
-        echo [Warn %date% %time%] %lang___whelp_showing% "%wlangnow%">>%wpath%data\running.log
+        warning Main/Help %lang___whelp_showing% "%wlangnow%"
         echo %lang_whelp_name% %wlangnow%.whelp:
         for /f "eol=# delims=;" %%l in (%wpath%sources\helps\%wlangnow%.whelp) do (
                 echo %%l
             )
     ) else (
-        echo [Error %date% %time%] %lang___whelp_error% "%wlangnow%">>%wpath%data\running.log
+        erroring Main/Help %lang___whelp_error% "%wlangnow%"
         echo %lang_whelp_unknown%: %wlangnow%.whelp
     )
 
