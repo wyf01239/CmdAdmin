@@ -9,8 +9,8 @@ set wlastpath=%cd%
 set wpath=%~dp0
 cd %wpath%
 :: program ver
-set wver=0.6
-set wvdate=2023.4.1
+set wver=0.7
+set wvdate=2023.7.23
 set CA=wyf9
 set wcal=False
 
@@ -61,7 +61,8 @@ if not exist %wpath%data\config\LangNow.wcfg (
     %warning% Main Lang file lost. Changed to en-us.
     echo [CA] WARNING: Langusge File lost.
     echo [CA] Changed language to "en-us".
-    echo [CA] You can use CASetting set LangNow *language* to change language config.
+    echo [CA] You can use "CASetting set LangNow *language*" to change language config.
+    echo      And use "CA / refresh lang" to refresh language file.
 )
 
 cd.

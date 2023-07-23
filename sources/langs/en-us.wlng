@@ -39,3 +39,6 @@ lang___whelp_error=Help File Not Found.
 lang__load_time=Load Time
 lang__load_modules_nope=No Modules Loaded.
 lang___wver=Showing Version info
+
+lang__refreshing_lang=Refreshing Language File...
+lang__refreshed_lang=Refreshed Language File.

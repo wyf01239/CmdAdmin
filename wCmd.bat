@@ -12,6 +12,9 @@ set wCleanLog=False
 ::#region progress
 if "%1" == "/" (
     if "%2" == "clean" goto _clean
+    if "%2" == "refresh" (
+        if "%3" == "lang" goto _refresh_lang
+    )
 )
 if "%1" == "/t" (
     %logging% Main/Proc Test
@@ -83,9 +86,22 @@ goto wend
         %erroring% Main/Help %lang___whelp_error% "%wlangnow%"
         echo %lang_whelp_unknown%: %wlangnow%.whelp
     )
+    goto wend
 
 :_clean
-call sources\batch\clean
+    call sources\batch\clean
+    goto wend
+
+:_refresh_lang
+    echo %lang__refreshing_lang%
+    %logging% Main//Refresh/Lang %lang__refreshing_lang%
+    set /p wlangnow=<%wpath%data\config\LangNow.wcfg
+    for /f "eol=# delims=;" %%l in (%wpath%sources\langs\%wlangnow%.wlng) do (
+        set %%l>nul
+    )
+    %logging% Main//Refresh/Lang %lang__refreshed_lang%
+    echo %lang__refreshed_lang%
+
 
 :plg
 :: TODO: ²å¼þ¹¦ÄÜ
