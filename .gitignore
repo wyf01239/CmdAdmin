@@ -1,7 +1,7 @@
 *.log
 temp/*
 data/temp/*
-# data/config/*
+data/config/*
 
 __pycache__
 _source/build/*

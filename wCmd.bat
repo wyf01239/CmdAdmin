@@ -11,7 +11,7 @@ set wCleanLog=False
 
 ::#region progress
 if "%1" == "/" (
-
+    if "%2" == "clean" goto _clean
 )
 if "%1" == "/t" (
     %logging% Main/Proc Test
@@ -84,12 +84,15 @@ goto wend
         echo %lang_whelp_unknown%: %wlangnow%.whelp
     )
 
+:_clean
+call sources\batch\clean
+
+:plg
+:: TODO: ²å¼þ¹¦ÄÜ
+
 :wend
     title %lang__cmd% - CmdAdmin
     if "%wca%" == "True" (
     goto %wcalastpath%
 )
     exit /b 0
-
-:plg
-echo ...
