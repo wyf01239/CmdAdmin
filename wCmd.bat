@@ -10,17 +10,16 @@ title %lang__cmd% - CmdAdmin ...
 set wCleanLog=False
 
 ::#region progress
+if "%1" == "/" (
+
+)
 if "%1" == "/t" (
     %logging% Main/Proc Test
     echo Test
     goto wend
     )
 if "%1" == "/q" goto quit
-if "%1" == "/e" (
-    %logging% Main/Proc Quitting CMD...
-    set CmdAdmin=
-    exit 0
-)
+if "%1" == "/e" goto wexit
 if "%1" == "/v" goto wver
 if "%1" == "/h" goto whelp
 if "%1" == "/d" goto wdellog
@@ -55,6 +54,11 @@ goto wend
     set CmdAdmin=
     cmd
     exit
+
+:wexit
+    %logging% Main/Proc Quitting CMD...
+    set CmdAdmin=
+    exit 0
 
 :wdellog
     del %wpath%data\running.log
