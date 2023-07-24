@@ -2,7 +2,6 @@
 # Last update: 2023-4-3
 # Disabled line start by "#".
 # Delim with ";".
-# 10 Space "          "
 CA /v          显示版本信息.
    /q          退出 CmdAdmin (不退出 CMD)
    /e          退出 CMD.

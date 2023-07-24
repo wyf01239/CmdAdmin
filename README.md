@@ -7,7 +7,8 @@ Windows **CMD** 扩展工具
 [版本信息](./_VersInfo/README.md)
 
 ## To Do
-TODO: 大改, 改为需安装才可使用?
+TODO: <del>大改, 改为需安装才可使用?</del>
+大改, 分为两个版本在同一处, (Insralled / Portable)
 
 ## Python
 
