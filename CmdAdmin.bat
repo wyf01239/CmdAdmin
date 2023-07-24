@@ -1,5 +1,4 @@
 @echo off
-:: echo [Info %date% %time%]  >>%wpath%data\running.log
 :: reset
 set cd=
 set date=
