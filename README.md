@@ -4,6 +4,8 @@ Windows **CMD** 扩展工具
 
 正在开发阶段, 原名 [wyfadmin](https://github.com/wyf9/wyfadmin_old)
 
+[版本信息](./_VersInfo/README.md)
+
 ## To Do
 TODO: 大改, 改为需安装才可使用?
 
