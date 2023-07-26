@@ -1,0 +1,44 @@
+# CmdAdmin language file "en-us" by wyf9
+# Last update: 2023-4-2
+# About commands: lang_xxx_xxx=xxxxx
+# About words: lang__xxx_xxx=xxxxx
+# About logs: lang___xxx_xxx=xxxxx
+# Disabled line start by "#".
+# Delim with ";".
+
+lang__cmd=Command Prompt
+lang__all_rights_reserved=All Rights Reserved.
+lang_wver_lang=language
+lang_wver_copy=Copyright
+lang_wver_nowlang=English
+lang_wver_project_home=Project Home
+lang__command=command
+lang__loaded=loaded
+lang__module=module
+lang__modules=modules
+lang__load_ok=Load OK
+lang___load_lang_ok=Language File Load OK.
+lang___init_modules=Loading modules...
+lang___init_modules_ok=Modules Load OK.
+lang___load_end_time=Load End Timestamp in a day
+lang___load_time=Load time
+lang___load_modules_ok_1=Loaded
+lang___load_modules_ok_2=Modules
+lang___load_ok=Load OK.
+lang___running_command=Running CA Command
+lang_quitting=Quitting
+lang__unknown_command=Unknown Command
+lang___unknown_command=Unknown Command
+lang___quitting=Quitting...
+lang_wdellog=Deleted
+lang_whelp_name=Help File
+lang_whelp_unknown=Unknown help File
+lang___whelp_showing=Showing Help File
+lang___whelp_showing_now=Showing Help File for now Language
+lang___whelp_error=Help File Not Found.
+lang__load_time=Load Time
+lang__load_modules_nope=No Modules Loaded.
+lang___wver=Showing Version info
+
+lang__refreshing_lang=Refreshing Language File...
+lang__refreshed_lang=Refreshed Language File.

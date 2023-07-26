@@ -1,9 +1,8 @@
-
 *.log
-note*.txt
 temp/*
-files/*
-main-chinese_OLD/*
-main_OLD/*
-lang_now.txt
-data/*
+data/temp/*
+data/config/*
+
+__pycache__
+_source/build/*
+_source/dist/*

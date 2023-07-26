@@ -1,1 +1,0 @@
-Setup a plugin from a Batch file.

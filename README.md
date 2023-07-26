@@ -1,17 +1,20 @@
-# Wyfadmin
+# CmdAdmin
 
-[![Join the chat at https://gitter.im/wyf01239/wyfadmin](https://badges.gitter.im/wyf01239/wyfadmin.svg)](https://gitter.im/wyf01239/wyfadmin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Windows **CMD** 扩展工具
 
-中文版 README: Click [here](README_Chinese.md) (README_Chinese.md)
-## What is "Wyfadmin" project?
-Wyfadmin is a toolbox Based on Batch.
+正在开发阶段, 原名 [wyfadmin](https://github.com/wyf9/wyfadmin_old)
 
-This project started in 2020.
+[版本信息](./_VersInfo/README.md)
 
-Old repo: [Here](https://github.com/wyf01239/wyfadmin_old) (wyf01239 / wyfadmin_old)
-## Download
-Please visit: [Here](https://wyf01239.github.com/projects/wyfadmin)(https://wyf01239.github.com/projects/wyfadmin)
-## Other & Wiki
-If You are interested in this project or have suggestions, please [open Wiki](https://github.com/wyf01239/wyfadmin/wiki).
+## To Do
+TODO: <del>大改, 改为需安装才可使用?</del>
+大改, 分为两个版本在同一处, (Installed / Portable)
 
-The project is not yet perfect. If you're having a problem, please [write an issue](https://github.com/wyf01239/wyfadmin/issues/new) to us.
+## Python
+
+因 CMD 没有部分扩展需要的功能, 部分主程序/插件功能需要 Python 支撑
+
+系统安装 Python 后, 可在 程序目录\ ```data\config\py_path.wcfg``` 中设置 Python 的可执行程序(```python.exe```).
+
+- 如 Python 安装时设置了 ```%PATH%``` , 可直接设置为 ```python``` 或 ```py``` .
+- 推荐的 Python 版本: **3.10**+

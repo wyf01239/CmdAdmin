@@ -1,0 +1,44 @@
+# CmdAdmin language file "zh-cn" by wyf9
+# Last update: 2023-4-2
+# About commands: lang_xxx_xxx=xxxxx
+# About words: lang__xxx_xxx=xxxxx
+# About logs: lang___xxx_xxx=xxxxx
+# Disabled line start by "#".
+# Delim with ";".
+
+lang__cmd=命令提示符
+lang__all_rights_reserved=保留所有权.
+lang_wver_lang=语言
+lang_wver_copy=版权所有
+lang_wver_nowlang=Chinese (简体中文)
+lang_wver_project_home=项目地址
+lang__command=命令
+lang__loaded=已加载
+lang__module=个模块
+lang__modules=个模块
+lang__load_ok=加载完成
+lang___load_lang_ok=语言文件加载完成.
+lang___init_modules=正在加载模块...
+lang___init_modules_ok=模块加载完成.
+lang___load_end_time=加载完成时的时间戳
+lang___load_time=加载时间
+lang___load_modules_ok_1=已加载
+lang___load_modules_ok_2=个模块
+lang___load_ok=加载完成.
+lang___running_command=运行 CA 命令
+lang_quitting=正在退出
+lang__unknown_command=未知的命令
+lang___unknown_command=未知的命令
+lang___quitting=正在退出
+lang_wdellog=已删除
+lang_whelp_name=帮助文件
+lang_whelp_unknown=找不到帮助文件
+lang___whelp_showing=显示帮助文件
+lang___whelp_showing_now=显示当前语言的帮助文件
+lang___whelp_error=找不到帮助文件
+lang__load_time=加载时间
+lang__load_modules_nope=没有加载模块
+lang___wver=显示版本信息.
+
+lang__refreshing_lang=正在刷新语言文件...
+lang__refreshed_lang=已刷新语言文件.
