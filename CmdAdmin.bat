@@ -6,18 +6,14 @@ set time=
 set wlastpath=%cd%
 :: get program path
 set wpath=%~dp0
-cd %wpath%
+cd /d %wpath%
 :: program ver
 set wver=0.7
 set wvdate=2023.7.23
+set wvyear=%wvdate:~0,4%
 set CA=wyf9
 set wcal=False
-
-:: CAL.bat support
-if "%1" == "/cal" (
-    set wlastpath=%2
-    set wcal=True
-)
+set calLoadErr=0
 
 ::DosKey for Logging
 set logging=call %wpath%sources\std\log\info
@@ -33,7 +29,7 @@ call sources\std\draw
 
 :: get python path config
 if not exist data\config\py_path.wcfg (
-    %warning% Load Python Path config Lost. Change to "python".
+    %warning% Load Python Path config Lost. Changed to "python".
     echo python>data\config\py_path.wcfg
 )
 set /p wPyPath=<data\config\py_path.wcfg
@@ -43,15 +39,14 @@ set /p wPyPath=<data\config\py_path.wcfg
 cd.
 call %wPyPath% sources\py\get_timestamp.py>nul 2>nul
 if not %ERRORLEVEL% == 0 (
-    cd.
-    call sources\get_timestamp
+    set /a calLoadErr=calLoadErr+1
+) else (
+    set /p wLoadStart=<data\temp\time.txt
+    %logging% Load Load start timestamp in day: %wLoadStart%
 )
-set /p wLoadStart=<data\temp\time.txt
 
-%logging% Load Load start timestamp in day: %wLoadStart%
 
 :: reset modules num
-set wvyear=2023
 set wLoadModules=0
 
 if not exist %wpath%data\config\LangNow.wcfg (
@@ -101,23 +96,31 @@ prompt $P$S$G$G$S
 cd.
 call %wPyPath% sources\py\get_timestamp.py>nul 2>nul
 if not %ERRORLEVEL% == 0 (
-    cd.
-    call sources\get_timestamp
+    set /a calLoadErr=calLoadErr+1
+) else (
+    set /p wLoadEnd=<data\temp\time.txt
+    %logging% Load %lang___load_end_time%: %wLoadEnd%
 )
-set /p wLoadEnd=<data\temp\time.txt
 
-%logging% Load %lang___load_end_time%: %wLoadEnd%
 
 :: calc load time
 cd.
 call %wPyPath% sources\py\wcalc.py 2 %wLoadEnd% %wLoadStart%
 if not %ERRORLEVEL% == 0 (
-    %erroring% Load Calc Load Time Failed.
+    set /a calLoadErr=calLoadErr+1
+) else (
+    set /p wLoadSec=<data\temp\calced.txt
 )
-set /p wLoadSec=<data\temp\calced.txt
 
-
-%logging% Load %lang___load_time%: %wLoadSec%s
+:: check get time status
+if %calLoadErr% GTR 0 (
+    %erroring% Load %lang___get_loadtime_failed%
+    echo [CA] %lang___get_loadtime_failed%
+) else (
+    set wLoadSec=%wLoadSec%
+    %logging% Load %lang___load_time%: %wLoadSec%s
+    echo [CA] %lang__load_time%: %wLoadSec%s
+)
 
 %logging% Load %lang___load_modules_ok_1% %wLoadModules% %lang___load_modules_ok_2%.
 if %wLoadModules% == 1 (
@@ -127,13 +130,7 @@ if %wLoadModules% == 1 (
 ) else (
     echo [CA] %lang__loaded% %wLoadModules% %lang__modules%.
 )
-cd %wpath%wPath 2>nul
-cd %wlastpath% 2>nul
+cd /d %wlastpath% 2>nul
 %logging% Load CmdAdmin %lang___load_ok%
 echo -------------------------------- >>%wpath%data\running.log
-echo [CA] %lang__load_time%: %wLoadSec%s
-:: CAL.bat support 2
-if "%wcal%" == "True" (
-    cd %wpath%wPath
-)
 echo [CA] CmdAdmin %lang__load_ok%.

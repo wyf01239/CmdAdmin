@@ -27,7 +27,11 @@ except:
 
 try:
     with open("data/temp/calced.txt", "w+") as file:
-        file.write(str(ret))
+        try:
+            reta = str(ret[0:8])
+        except:
+            reta = str(ret)
+        file.write(reta)
         file.close()
 finally:
     wexit(0)

@@ -41,7 +41,7 @@ goto wend
     %logging% Main %lang___wver%
     echo CmdAdmin v%wver%. %wvdate%
     echo %lang_wver_lang%: %wlangnow% - %lang_wver_nowlang%
-    echo %lang_wver_copy% (c) %wvyear% wyf9. %lang__all_rights_reserved%
+    echo %lang_wver_copy% (c)%wvyear% wyf9. %lang__all_rights_reserved%
     echo %lang_wver_project_home%: https://github.com/wyf01239/CmdAdmin
     goto wend
 
@@ -52,7 +52,6 @@ goto wend
     echo [CA] %lang_quitting% CmdAdmin...
     prompt $P$G
     title %lang__cmd%
-    cd /d %wlastpath% 2>nul
     start %wpath%sources\AltAddF10.vbs
     set CmdAdmin=
     cmd

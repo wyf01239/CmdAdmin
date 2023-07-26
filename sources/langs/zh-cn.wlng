@@ -39,6 +39,7 @@ lang___whelp_error=找不到帮助文件
 lang__load_time=加载时间
 lang__load_modules_nope=没有加载模块
 lang___wver=显示版本信息.
+lang___get_loadtime_failed=获取加载时间失败.
 
 lang__refreshing_lang=正在刷新语言文件...
 lang__refreshed_lang=已刷新语言文件.

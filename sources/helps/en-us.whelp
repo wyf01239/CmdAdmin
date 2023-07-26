@@ -2,9 +2,13 @@
 # Last update: 2023-4-3
 # Disabled line start by "#".
 # Delim with ";".
-CA /v          Show Version Info.
-   /q          Quit CmdAdmin (No Quit CMD)
-   /e          Quit CMD.
-   /h          Show Help Message.
-      [Language]          Show Help Message in a language.
-   /d          Delete CmdAdmin Logs and Quit.
+CA /v	Show Version Info.
+	/q	Quit CmdAdmin (No Quit CMD)
+	/e	Quit CMD.
+	/h	Show Help Message.
+		[Language]	Show Help Message in a language.
+	/d	Delete CmdAdmin Logs and Quit.
+		/
+		clean		Clean unused Files (No logs)
+		refresh
+			lang	Refresh language

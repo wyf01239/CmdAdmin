@@ -2,9 +2,11 @@
 # Last update: 2023-4-3
 # Disabled line start by "#".
 # Delim with ";".
-CA /v          显示版本信息.
-   /q          退出 CmdAdmin (不退出 CMD)
-   /e          退出 CMD.
-   /h          显示帮助信息.
-      [Language]          显示特定语言的帮助信息.
-   /d          删除 CmdAdmin 日志并退出.
+CA	/v	显示版本信息.
+	/q	退出 CmdAdmin (不退出 CMD)
+	/e	退出 CMD.
+	/h	显示帮助信息.
+	/h [Language]	显示特定语言的帮助信息.
+	/d		删除 CmdAdmin 日志并退出.
+	/ clean		清除无用文件 (不包括日志)
+	/ refresh lang	刷新语言

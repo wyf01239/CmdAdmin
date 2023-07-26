@@ -13,7 +13,7 @@ lang_wver_copy=Copyright
 lang_wver_nowlang=English
 lang_wver_project_home=Project Home
 lang__command=command
-lang__loaded=loaded
+lang__loaded=Loaded
 lang__module=module
 lang__modules=modules
 lang__load_ok=Load OK
@@ -39,6 +39,7 @@ lang___whelp_error=Help File Not Found.
 lang__load_time=Load Time
 lang__load_modules_nope=No Modules Loaded.
 lang___wver=Showing Version info
+lang___get_loadtime_failed=Get load time Failed.
 
 lang__refreshing_lang=Refreshing Language File...
 lang__refreshed_lang=Refreshed Language File.
