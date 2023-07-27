@@ -42,7 +42,7 @@ if not %ERRORLEVEL% == 0 (
     set /a calLoadErr=calLoadErr+1
 ) else (
     set /p wLoadStart=<data\temp\time.txt
-    %logging% Load Load start timestamp in day: %wLoadStart%
+    %logging% Load Load start timestamp in day (less critics): %wLoadStart%
 )
 
 
