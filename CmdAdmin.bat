@@ -35,6 +35,14 @@ if not exist data\config\py_path.wcfg (
 set /p wPyPath=<data\config\py_path.wcfg
 %logging% Load Python Path: "%wPyPath%"
 
+::check python ver
+cd.
+%wPyPath% --version>nul 2>nul
+if not %ERRORLEVEL% == 0 (
+    %warning% Python "%wPyPath%" maybe cannot use
+    echo Python "%wPyPath%" Maybe Cannot use. If it is True, You will can't use CmdAdmin.
+)
+
 :: get start timestamp
 cd.
 call %wPyPath% sources\py\get_timestamp.py>nul 2>nul
@@ -42,9 +50,7 @@ if not %ERRORLEVEL% == 0 (
     set /a calLoadErr=calLoadErr+1
 ) else (
     set /p wLoadStart=<data\temp\time.txt
-    %logging% Load Load start timestamp in day (less critics): %wLoadStart%
 )
-
 
 :: reset modules num
 set wLoadModules=0
@@ -99,7 +105,6 @@ if not %ERRORLEVEL% == 0 (
     set /a calLoadErr=calLoadErr+1
 ) else (
     set /p wLoadEnd=<data\temp\time.txt
-    %logging% Load %lang___load_end_time%: %wLoadEnd%
 )
 
 
@@ -118,8 +123,12 @@ if %calLoadErr% GTR 0 (
     echo [CA] %lang___get_loadtime_failed%
 ) else (
     set wLoadSec=%wLoadSec%
-    %logging% Load %lang___load_time%: %wLoadSec%s
-    echo [CA] %lang__load_time%: %wLoadSec%s
+    if not "%wLoadSec%" == "" (
+        set wLoadSec=%wLoadSec:~0,8%
+        %logging% Load %lang___load_time%: %wLoadSec%s
+        echo [CA] %lang__load_time%: %wLoadSec%s
+    )
+    
 )
 
 %logging% Load %lang___load_modules_ok_1% %wLoadModules% %lang___load_modules_ok_2%.
