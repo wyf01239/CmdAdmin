@@ -5,19 +5,17 @@ if not "%CA%" == "wyf9" (
     exit /b 1
 )
 
-%logging% Main %lang___running_command%: CA %*
+%logging% Main %lang___running_command%: "CA %*"
 title %lang__cmd% - CmdAdmin ...
 set wCleanLog=False
 
 ::#region progress
 if "%1" == "/" (
-    if "%2" == "clean" goto _clean
-    if "%2" == "refresh" (
-        if "%3" == "lang" goto _refresh_lang
-    )
+    %wpath%sources\proc %*
+    goto wend
 )
 if "%1" == "/t" (
-    %logging% Main/Proc Test
+    %logging% Proc Test
     echo Test
     goto wend
     )
@@ -26,11 +24,12 @@ if "%1" == "/e" goto wexit
 if "%1" == "/v" goto wver
 if "%1" == "/h" goto whelp
 if "%1" == "/d" goto wdellog
-%warning% Main/Proc %lang___unknown_command%
+
 if not "%1" == "" (
     if not "%1" == " " (
         if exist %wpath%plugins\%1 goto plg
         if exist %wpath%plugins\%1.bat goto plg
+        %warning% %lang___unknown_command%
         echo [CA] %lang__unknown_command%.
     )
 )
@@ -58,7 +57,7 @@ goto wend
     exit
 
 :wexit
-    %logging% Main/Proc Quitting CMD...
+    %logging% Proc Quitting CMD...
     set CmdAdmin=
     exit 0
 
@@ -86,21 +85,6 @@ goto wend
         echo %lang_whelp_unknown%: %wlangnow%.whelp
     )
     goto wend
-
-:_clean
-    call sources\batch\clean
-    goto wend
-
-:_refresh_lang
-    echo %lang__refreshing_lang%
-    %logging% Main//Refresh/Lang %lang__refreshing_lang%
-    set /p wlangnow=<%wpath%data\config\LangNow.wcfg
-    for /f "eol=# delims=;" %%l in (%wpath%sources\langs\%wlangnow%.wlng) do (
-        set %%l>nul
-    )
-    %logging% Main//Refresh/Lang %lang__refreshed_lang%
-    echo %lang__refreshed_lang%
-
 
 :plg
 :: TODO: ²å¼þ¹¦ÄÜ
